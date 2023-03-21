@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simulasi Gerak Jatuh Bebas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="canvas"></canvas>
+      <div class="input-container">
+        <label for="planet">Pilih planet:</label>
+        <select id="planet">
+          <option value="bumi">Bumi</option>
+          <option value="matahari">Matahari</option>
+          <option value="bulan">Bulan</option>
+          <option value="mars">Mars</option>
+          <option value="jupiter">Jupiter</option>
+          <option value="neptunus">Neptunus</option>
+          <option value="venus">Venus</option>
+        </select>
+        <br />
+        <label for="checkbox-reset-otomatis" class="label-reset-otomatis"
+          >Otomatis Reset</label
+        >
+        <input
+          type="checkbox"
+          id="checkbox-reset-otomatis"
+          value="nilai-checkbox"
+        />
+        <br />
+        <button type="reset" id="reset-button" onclick="resetSimulasi()">
+          Reset
+        </button>
+      </div>
+      <br />
+      <p id="copyright">Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
