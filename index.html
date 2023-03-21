@@ -6,18 +6,22 @@
     <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
   </head>
   <body>
+    <h1>Simulasi Gerak Jatuh Bebas</h1>
     <div class="container">
       <canvas id="canvas"></canvas>
       <div class="input-container">
         <label for="planet">Pilih planet:</label>
         <select id="planet">
+          <option value="merkurius">Merkurius</option>
+          <option value="venus">Venus</option>
           <option value="bumi">Bumi</option>
-          <option value="matahari">Matahari</option>
           <option value="bulan">Bulan</option>
           <option value="mars">Mars</option>
           <option value="jupiter">Jupiter</option>
+          <option value="saturnus">Saturnus</option>
+          <option value="uranus">Uranus</option>
           <option value="neptunus">Neptunus</option>
-          <option value="venus">Venus</option>
+          <option value="matahari">Matahari</option>
         </select>
         <br />
         <label for="checkbox-reset-otomatis" class="label-reset-otomatis"
@@ -34,8 +38,20 @@
         </button>
       </div>
       <br />
-      <p id="copyright">Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.</p>
     </div>
+    <div class="rumus-container">
+      <h4>Rumus</h4>
+      <ul>
+        <li>
+          posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu
+          ** 2
+        </li>
+        <li>kecepatan = kecepatanAwal + gravitasi * waktu</li>
+      </ul>
+    </div>
+    <p id="copyright">
+      Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.
+    </p>
     <script src="script.js"></script>
   </body>
 </html>

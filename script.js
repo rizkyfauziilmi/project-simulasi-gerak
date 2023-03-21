@@ -15,8 +15,12 @@ const warnaPlanet = {
     jupiter: '#F1C40F',
     neptunus: '#2980B9',
     venus: '#F5B041',
-    matahari: '#FFA500'
+    matahari: '#FFA500',
+    merkurius: '#C0C0C0',
+    saturnus: '#FFD700',
+    uranus: '#7FFFD4'
 }
+
 
 // Set parameter awal
 let gravitasi = 9.81;
@@ -58,6 +62,9 @@ function animasi() {
     kecepatan = kecepatanAwal + gravitasi * waktu;
     waktu += 1 / 60;
 
+    // Hitung jarak antara bola dan ujung bawah canvas
+    let jarak = canvas.height - posisi;
+
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.fillStyle = "white";
@@ -65,9 +72,6 @@ function animasi() {
     ctx.fillText(`Posisi awal: ${canvas.height.toFixed(2)} m`, 10, 40);
     ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 60);
     ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 80);
-
-    // Hitung jarak antara bola dan ujung bawah canvas
-    let jarak = canvas.height - posisi;
     ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 100);
 
     // Meminta animasi frame berikutnya jika bola belum mencapai ujung bawah canvas
@@ -95,8 +99,20 @@ document.getElementById('planet').addEventListener('change', (e) => {
             gravitasi = 1.62;
             warnaPlanetSekarang = warnaPlanet.bulan;
             break;
+        case 'merkurius':
+            gravitasi = 3.7;
+            warnaPlanetSekarang = warnaPlanet.merkurius;
+            break;
+        case 'saturnus':
+            gravitasi = 10.44;
+            warnaPlanetSekarang = warnaPlanet.saturnus
+            break;
+        case 'uranus':
+            gravitasi = 8.87;
+            warnaPlanetSekarang = warnaPlanet.uranus;
+            break;
         case 'mars':
-            gravitasi = 3.71;
+            gravitasi = 3.72;
             warnaPlanetSekarang = warnaPlanet.mars;
             break;
         case 'jupiter':
