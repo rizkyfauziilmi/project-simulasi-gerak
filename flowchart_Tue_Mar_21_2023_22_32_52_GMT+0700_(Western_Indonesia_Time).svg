@@ -1,0 +1,1638 @@
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1059" height="5142" shape-rendering="optimizeSpeed">
+                
+                <g>
+                   <rect x="50" y="65" width="404.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const canvas = document.getElementById('canvas')</title>
+            <text x="65" y="85" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="85">const canvas = document.getElementById('canvas')</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="113.5" width="303" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const ctx = canvas.getContext('2d')</title>
+            <text x="65" y="133.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="133.5">const ctx = canvas.getContext('2d')</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="162" width="443.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const tombolReset = document.getElementById('reset-button')</title>
+            <text x="65" y="182" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="182">const tombolReset = document.getElementById('reset...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="210.5" width="443.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const checkboxResetOtomatis = document.getElementById('checkbox-reset-otomatis')</title>
+            <text x="65" y="230.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="230.5">const checkboxResetOtomatis = document.getElementB...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="259" width="170.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>canvas.width = 600</title>
+            <text x="65" y="279" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="279">canvas.width = 600</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="307.5" width="178.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>canvas.height = 400</title>
+            <text x="65" y="327.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="327.5">canvas.height = 400</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="356" width="209.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const warnaPlanet = {*}</title>
+            <text x="65" y="376" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="376">const warnaPlanet = {*}</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="404.5" width="147" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>bumi: '#3B3B98'</title>
+            <text x="102" y="424.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="424.5">bumi: '#3B3B98'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="453" width="154.8" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>bulan: '#BDC3C7'</title>
+            <text x="102" y="473" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="473">bulan: '#BDC3C7'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="501.5" width="147" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>mars: '#E74C3C'</title>
+            <text x="102" y="521.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="521.5">mars: '#E74C3C'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="550" width="170.4" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>jupiter: '#F1C40F'</title>
+            <text x="102" y="570" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="570">jupiter: '#F1C40F'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="598.5" width="178.2" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>neptunus: '#2980B9'</title>
+            <text x="102" y="618.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="618.5">neptunus: '#2980B9'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="647" width="154.8" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>venus: '#F5B041'</title>
+            <text x="102" y="667" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="667">venus: '#F5B041'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="695.5" width="349.8" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>matahari: '#FFA500' // Set parameter awal</title>
+            <text x="102" y="715.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="715.5">matahari: '#FFA500' // Set parameter awal</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="744" width="186" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let gravitasi = 9.81</title>
+            <text x="65" y="764" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="764">let gravitasi = 9.81</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="792.5" width="186" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const posisiAwal = 1</title>
+            <text x="65" y="812.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="812.5">const posisiAwal = 1</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="841" width="209.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const kecepatanAwal = 0</title>
+            <text x="65" y="861" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="861">const kecepatanAwal = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="889.5" width="131.39999999999998" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let waktu = 0</title>
+            <text x="65" y="909.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="909.5">let waktu = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="938" width="209.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let posisi = posisiAwal</title>
+            <text x="65" y="958" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="958">let posisi = posisiAwal</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="986.5" width="256.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let kecepatan = kecepatanAwal</title>
+            <text x="65" y="1006.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1006.5">let kecepatan = kecepatanAwal</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1035" width="357.59999999999997" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let warnaPlanetSekarang = warnaPlanet.bumi</title>
+            <text x="65" y="1055" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1055">let warnaPlanetSekarang = warnaPlanet.bumi</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1083.5" width="225" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let resetOtomatis = false</title>
+            <text x="65" y="1103.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1103.5">let resetOtomatis = false</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="1147" width="213.79999999999998" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="60" y1="1147" x2="60" y2="1177" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="253.79999999999995" y1="1147" x2="253.79999999999995" y2="1177" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>function gambarBola()</title>
+            <text x="75" y="1167" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="1167">function gambarBola()</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="1195.5" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.beginPath()</title>
+            <text x="102" y="1215.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1215.5">ctx.beginPath()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1244" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.arc(canvas.width / 2, posisi, 10, 0, Math.PI * 2)</title>
+            <text x="102" y="1264" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1264">ctx.arc(canvas.width / 2, posisi, 10, 0, Math.PI *...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1292.5" width="303" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillStyle = warnaPlanetSekarang</title>
+            <text x="102" y="1312.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1312.5">ctx.fillStyle = warnaPlanetSekarang</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1341" width="108" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fill()</title>
+            <text x="102" y="1361" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1361">ctx.fill()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1389.5" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.closePath()</title>
+            <text x="102" y="1409.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1409.5">ctx.closePath()</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="1453" width="252.79999999999998" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="60" y1="1453" x2="60" y2="1483" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="292.79999999999995" y1="1453" x2="292.79999999999995" y2="1483" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>function bersihkanCanvas()</title>
+            <text x="75" y="1473" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="1473">function bersihkanCanvas()</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="1501.5" width="404.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.clearRect(0, 0, canvas.width, canvas.height)</title>
+            <text x="102" y="1521.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1521.5">ctx.clearRect(0, 0, canvas.width, canvas.height)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="1565" width="237.2" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="60" y1="1565" x2="60" y2="1595" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="277.2" y1="1565" x2="277.2" y2="1595" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>function resetSimulasi()</title>
+            <text x="75" y="1585" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="1585">function resetSimulasi()</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="1613.5" width="295.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>tombolReset.style.display = 'none'</title>
+            <text x="102" y="1633.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1633.5">tombolReset.style.display = 'none'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1662" width="100.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>waktu = 0</title>
+            <text x="102" y="1682" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1682">waktu = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1710.5" width="178.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>posisi = posisiAwal</title>
+            <text x="102" y="1730.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1730.5">posisi = posisiAwal</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1759" width="225" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>kecepatan = kecepatanAwal</title>
+            <text x="102" y="1779" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1779">kecepatan = kecepatanAwal</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1807.5" width="162.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>bersihkanCanvas()</title>
+            <text x="102" y="1827.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1827.5">bersihkanCanvas()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="1856" width="100.2" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>animasi()</title>
+            <text x="102" y="1876" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1876">animasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="1919.5" width="190.4" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="60" y1="1919.5" x2="60" y2="1949.5" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="230.4" y1="1919.5" x2="230.4" y2="1949.5" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>function animasi()</title>
+            <text x="75" y="1939.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="1939.5">function animasi()</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="1968" width="162.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>bersihkanCanvas()</title>
+            <text x="102" y="1988" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1988">bersihkanCanvas()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2016.5" width="123.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>gambarBola()</title>
+            <text x="102" y="2036.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2036.5">gambarBola()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2065" width="443.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu ** 2</title>
+            <text x="102" y="2085" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2085">posisi = posisiAwal + kecepatanAwal * waktu + 0.5 ...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2113.5" width="381" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>kecepatan = kecepatanAwal + gravitasi * waktu</title>
+            <text x="102" y="2133.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2133.5">kecepatan = kecepatanAwal + gravitasi * waktu</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2162" width="147" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>waktu += 1 / 60</title>
+            <text x="102" y="2182" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2182">waktu += 1 / 60</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2210.5" width="295.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>let jarak = canvas.height - posisi</title>
+            <text x="102" y="2230.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2230.5">let jarak = canvas.height - posisi</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2259" width="342" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.font = "bold 13px Arial, sans-serif"</title>
+            <text x="102" y="2279" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2279">ctx.font = "bold 13px Arial, sans-serif"</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2307.5" width="209.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillStyle = "white"</title>
+            <text x="102" y="2327.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2327.5">ctx.fillStyle = "white"</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2356" width="186" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi.toFixed(2)</title>
+            <text x="102" y="2376" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2376">gravitasi.toFixed(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2404.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillText(`Gravitasi: ${gravitasi.toFixed(2)} m / s²`, 10, 20)</title>
+            <text x="102" y="2424.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2424.5">ctx.fillText(`Gravitasi: ${gravitasi.toFixed(2)} m...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2453" width="217.2" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>canvas.height.toFixed(2)</title>
+            <text x="102" y="2473" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2473">canvas.height.toFixed(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2501.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillText(`Posisi awal: ${canvas.height.toFixed(2)} m`, 10, 40)</title>
+            <text x="102" y="2521.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2521.5">ctx.fillText(`Posisi awal: ${canvas.height.toFixed...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2550" width="154.8" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>waktu.toFixed(2)</title>
+            <text x="102" y="2570" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2570">waktu.toFixed(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2598.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 60)</title>
+            <text x="102" y="2618.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2618.5">ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 6...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2647" width="186" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>kecepatan.toFixed(2)</title>
+            <text x="102" y="2667" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2667">kecepatan.toFixed(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2695.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 80)</title>
+            <text x="102" y="2715.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2715.5">ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2744" width="154.8" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>jarak.toFixed(2)</title>
+            <text x="102" y="2764" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2764">jarak.toFixed(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="2792.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 100)</title>
+            <text x="102" y="2812.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2812.5">ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak...</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="117" y="2856" width="286.2" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="87,2871 117,2841 147,2871 117,2901" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(posisi &lt; canvas.height - 10)</title>
+            <text x="162" y="2876" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="2876">(posisi &lt; canvas.height - 10)</tspan>
+            </text>
+            
+            <text x="109.2" y="2876" font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="2902.95" font-family="monospace" font-size="13" fill="#222">+</text> <text x="407.09999999999997" y="2869.05" font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="137" y="2911" width="264" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>requestAnimationFrame(animasi)</title>
+            <text x="152" y="2931" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="2931">requestAnimationFrame(animasi)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="493.2" y="2926" width="177" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="463.2,2941 493.2,2911 523.2,2941 493.2,2971" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(resetOtomatis)</title>
+            <text x="538.2" y="2946" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="538.2" y="2946">(resetOtomatis)</tspan>
+            </text>
+            
+            <text x="485.4" y="2946" font-family="monospace" font-size="13" fill="#222">if</text> <text x="501" y="2972.95" font-family="monospace" font-size="13" fill="#222">+</text> <text x="674.1" y="2939.05" font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="513.2" y="2981" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>resetSimulasi()</title>
+            <text x="528.2" y="3001" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="528.2" y="3001">resetSimulasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="730.2" y="2981" width="303" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>tombolReset.style.display = 'block'</title>
+            <text x="745.2" y="3001" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="745.2" y="3001">tombolReset.style.display = 'block'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="3031" width="287.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>document.getElementById('planet')</title>
+            <text x="65" y="3051" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="3051">document.getElementById('planet')</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="3079.5" width="279.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>.addEventListener('change', *())</title>
+            <text x="65" y="3099.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="3099.5">.addEventListener('change', *())</tspan>
+            </text>
+                   <circle cx="56" cy="3103.5" r="4" style="fill:#ede7f6; stroke:#444; stroke-width:1"></circle>
+                   
+                </g>
+            <g>
+                <rect x="87" y="3128" width="96.8" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="97" y1="3128" x2="97" y2="3158" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="173.8" y1="3128" x2="173.8" y2="3158" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>(e) =&gt;</title>
+            <text x="112" y="3148" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="3148">(e) =&gt;</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="3176.5" width="256.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const planet = e.target.value</title>
+            <text x="139" y="3196.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="3196.5">const planet = e.target.value</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="154" y="3240" width="177" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="124,3255 154,3225 184,3255 154,3285" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>switch (planet)</title>
+            <text x="199" y="3260" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="3260">switch (planet)</tspan>
+            </text>
+            
+            <text x="146.2" y="3260" font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="3286.95" font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="174" y="3295" width="123.6" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'bumi':</title>
+            <text x="189" y="3315" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="3315">case 'bumi':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3343.5" width="154.8" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 9.81</title>
+            <text x="226" y="3363.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3363.5">gravitasi = 9.81</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3392" width="326.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.bumi</title>
+            <text x="226" y="3412" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3412">warnaPlanetSekarang = warnaPlanet.bumi</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="3440.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="3450.5" x2="285" y2="3450.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="3460.5" x2="285" y2="3460.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 3441.5 L301, 3455.5 L285, 3469.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="3460.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3460.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="3489" width="131.39999999999998" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'bulan':</title>
+            <text x="189" y="3509" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="3509">case 'bulan':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3537.5" width="154.8" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 1.62</title>
+            <text x="226" y="3557.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3557.5">gravitasi = 1.62</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3586" width="334.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.bulan</title>
+            <text x="226" y="3606" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3606">warnaPlanetSekarang = warnaPlanet.bulan</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="3634.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="3644.5" x2="285" y2="3644.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="3654.5" x2="285" y2="3654.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 3635.5 L301, 3649.5 L285, 3663.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="3654.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3654.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="3683" width="123.6" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'mars':</title>
+            <text x="189" y="3703" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="3703">case 'mars':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3731.5" width="154.8" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 3.71</title>
+            <text x="226" y="3751.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3751.5">gravitasi = 3.71</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3780" width="326.4" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.mars</title>
+            <text x="226" y="3800" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3800">warnaPlanetSekarang = warnaPlanet.mars</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="3828.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="3838.5" x2="285" y2="3838.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="3848.5" x2="285" y2="3848.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 3829.5 L301, 3843.5 L285, 3857.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="3848.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3848.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="3877" width="147" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'jupiter':</title>
+            <text x="189" y="3897" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="3897">case 'jupiter':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3925.5" width="162.6" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 24.79</title>
+            <text x="226" y="3945.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3945.5">gravitasi = 24.79</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="3974" width="349.8" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.jupiter</title>
+            <text x="226" y="3994" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3994">warnaPlanetSekarang = warnaPlanet.jupiter</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="4022.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="4032.5" x2="285" y2="4032.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="4042.5" x2="285" y2="4042.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 4023.5 L301, 4037.5 L285, 4051.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="4042.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4042.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="4071" width="154.8" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'neptunus':</title>
+            <text x="189" y="4091" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="4091">case 'neptunus':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4119.5" width="162.6" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 11.15</title>
+            <text x="226" y="4139.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4139.5">gravitasi = 11.15</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4168" width="357.59999999999997" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.neptunus</title>
+            <text x="226" y="4188" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4188">warnaPlanetSekarang = warnaPlanet.neptunus</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="4216.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="4226.5" x2="285" y2="4226.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="4236.5" x2="285" y2="4236.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 4217.5 L301, 4231.5 L285, 4245.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="4236.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4236.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="4265" width="131.39999999999998" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'venus':</title>
+            <text x="189" y="4285" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="4285">case 'venus':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4313.5" width="154.8" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 8.87</title>
+            <text x="226" y="4333.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4333.5">gravitasi = 8.87</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4362" width="334.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.venus</title>
+            <text x="226" y="4382" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4382">warnaPlanetSekarang = warnaPlanet.venus</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="4410.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="4420.5" x2="285" y2="4420.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="4430.5" x2="285" y2="4430.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 4411.5 L301, 4425.5 L285, 4439.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="4430.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4430.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="174" y="4459" width="154.8" height="30" rx="2" ry="2" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>
+                   <title>case 'matahari':</title>
+            <text x="189" y="4479" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="4479">case 'matahari':</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4507.5" width="147" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>gravitasi = 274</title>
+            <text x="226" y="4527.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4527.5">gravitasi = 274</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="211" y="4556" width="357.59999999999997" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>warnaPlanetSekarang = warnaPlanet.matahari</title>
+            <text x="226" y="4576" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4576">warnaPlanetSekarang = warnaPlanet.matahari</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="211" y="4604.5" width="69" height="30" rx="2" ry="2" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                
+                <line x1="280" y1="4614.5" x2="285" y2="4614.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+                
+                <line x1="280" y1="4624.5" x2="285" y2="4624.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></line>
+
+                <path d="M285, 4605.5 L301, 4619.5 L285, 4633.5 Z" fill="#ce93d8" stroke="#444" stroke-width="1"></path>
+                             
+                <title>break</title>
+            <text x="226" y="4624.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="4624.5">break</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="4653" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>resetSimulasi()</title>
+            <text x="139" y="4673" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="4673">resetSimulasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="4701.5" width="443.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>checkboxResetOtomatis.addEventListener('change', *())</title>
+            <text x="65" y="4721.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="4721.5">checkboxResetOtomatis.addEventListener('change', *...</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="4750" width="96.8" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="97" y1="4750" x2="97" y2="4780" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="173.8" y1="4750" x2="173.8" y2="4780" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>(e) =&gt;</title>
+            <text x="112" y="4770" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="4770">(e) =&gt;</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="4813.5" width="309.6" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="124,4828.5 154,4798.5 184,4828.5 154,4858.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(!(posisi &lt; canvas.height - 10))</title>
+            <text x="199" y="4833.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="4833.5">(!(posisi &lt; canvas.height - 10))</tspan>
+            </text>
+            
+            <text x="146.2" y="4833.5" font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="4860.45" font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="174" y="4868.5" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>resetSimulasi()</title>
+            <text x="189" y="4888.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="4888.5">resetSimulasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="4918.5" width="295.2" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>const isChecked = e.target.checked</title>
+            <text x="139" y="4938.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="4938.5">const isChecked = e.target.checked</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="154" y="4982" width="145.8" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="124,4997 154,4967 184,4997 154,5027" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(isChecked)</title>
+            <text x="199" y="5002" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="5002">(isChecked)</tspan>
+            </text>
+            
+            <text x="146.2" y="5002" font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="5028.95" font-family="monospace" font-size="13" fill="#222">+</text> <text x="303.7" y="4995.05" font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="174" y="5037" width="186" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>resetOtomatis = true</title>
+            <text x="189" y="5057" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="5057">resetOtomatis = true</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="420" y="5037" width="193.79999999999998" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>resetOtomatis = false</title>
+            <text x="435" y="5057" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="435" y="5057">resetOtomatis = false</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="5087" width="100.2" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>animasi()</title>
+            <text x="65" y="5107" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="5107">animasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75" width="216.6" height="24" style="fill:#fff59d; stroke:#444; stroke-width:1"></rect>
+               <circle cx="25" cy="25" r="15" style="fill:#fff59d; stroke:#444; stroke-width:1"></circle>
+               <title>Program: source module</title>
+            <text x="55" y="30" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 76 Q25 80
+                29 80
+                L42 80 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 77 L50, 80 L42, 83 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 124.5 Q25 128.5
+                29 128.5
+                L42 128.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 125.5 L50, 128.5 L42, 131.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 173 Q25 177
+                29 177
+                L42 177 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 174 L50, 177 L42, 180 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 221.5 Q25 225.5
+                29 225.5
+                L42 225.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 222.5 L50, 225.5 L42, 228.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 270 Q25 274
+                29 274
+                L42 274 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 271 L50, 274 L42, 277 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 318.5 Q25 322.5
+                29 322.5
+                L42 322.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 319.5 L50, 322.5 L42, 325.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 367 Q25 371
+                29 371
+                L42 371 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 368 L50, 371 L42, 374 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 415.5 Q68.5 419.5
+                72.5 419.5
+                L87 419.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 464 Q68.5 468
+                72.5 468
+                L87 468 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 512.5 Q68.5 516.5
+                72.5 516.5
+                L87 516.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 561 Q68.5 565
+                72.5 565
+                L87 565 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 609.5 Q68.5 613.5
+                72.5 613.5
+                L87 613.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 658 Q68.5 662
+                72.5 662
+                L87 662 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M68.5, 386 L68.5 706.5 Q68.5 710.5
+                72.5 710.5
+                L87 710.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M25, 40 L25 755 Q25 759
+                29 759
+                L42 759 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 756 L50, 759 L42, 762 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 803.5 Q25 807.5
+                29 807.5
+                L42 807.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 804.5 L50, 807.5 L42, 810.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 852 Q25 856
+                29 856
+                L42 856 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 853 L50, 856 L42, 859 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 900.5 Q25 904.5
+                29 904.5
+                L42 904.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 901.5 L50, 904.5 L42, 907.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 949 Q25 953
+                29 953
+                L42 953 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 950 L50, 953 L42, 956 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 997.5 Q25 1001.5
+                29 1001.5
+                L42 1001.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 998.5 L50, 1001.5 L42, 1004.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1046 Q25 1050
+                29 1050
+                L42 1050 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1047 L50, 1050 L42, 1053 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1094.5 Q25 1098.5
+                29 1098.5
+                L42 1098.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1095.5 L50, 1098.5 L42, 1101.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1158 Q25 1162
+                29 1162
+                L42 1162 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1159 L50, 1162 L42, 1165 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1177 L68.5 1206.5 Q68.5 1210.5
+                72.5 1210.5
+                L79 1210.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1207.5 L87, 1210.5 L79, 1213.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1177 L68.5 1255 Q68.5 1259
+                72.5 1259
+                L79 1259 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1256 L87, 1259 L79, 1262 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1177 L68.5 1303.5 Q68.5 1307.5
+                72.5 1307.5
+                L79 1307.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1304.5 L87, 1307.5 L79, 1310.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1177 L68.5 1352 Q68.5 1356
+                72.5 1356
+                L79 1356 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1353 L87, 1356 L79, 1359 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1177 L68.5 1400.5 Q68.5 1404.5
+                72.5 1404.5
+                L79 1404.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1401.5 L87, 1404.5 L79, 1407.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1464 Q25 1468
+                29 1468
+                L42 1468 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1465 L50, 1468 L42, 1471 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1483 L68.5 1512.5 Q68.5 1516.5
+                72.5 1516.5
+                L79 1516.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1513.5 L87, 1516.5 L79, 1519.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1576 Q25 1580
+                29 1580
+                L42 1580 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1577 L50, 1580 L42, 1583 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1624.5 Q68.5 1628.5
+                72.5 1628.5
+                L79 1628.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1625.5 L87, 1628.5 L79, 1631.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1673 Q68.5 1677
+                72.5 1677
+                L79 1677 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1674 L87, 1677 L79, 1680 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1721.5 Q68.5 1725.5
+                72.5 1725.5
+                L79 1725.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1722.5 L87, 1725.5 L79, 1728.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1770 Q68.5 1774
+                72.5 1774
+                L79 1774 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1771 L87, 1774 L79, 1777 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1818.5 Q68.5 1822.5
+                72.5 1822.5
+                L79 1822.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1819.5 L87, 1822.5 L79, 1825.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1595 L68.5 1867 Q68.5 1871
+                72.5 1871
+                L79 1871 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1868 L87, 1871 L79, 1874 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 1930.5 Q25 1934.5
+                29 1934.5
+                L42 1934.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 1931.5 L50, 1934.5 L42, 1937.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 1979 Q68.5 1983
+                72.5 1983
+                L79 1983 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 1980 L87, 1983 L79, 1986 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2027.5 Q68.5 2031.5
+                72.5 2031.5
+                L79 2031.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2028.5 L87, 2031.5 L79, 2034.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2076 Q68.5 2080
+                72.5 2080
+                L79 2080 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2077 L87, 2080 L79, 2083 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2124.5 Q68.5 2128.5
+                72.5 2128.5
+                L79 2128.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2125.5 L87, 2128.5 L79, 2131.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2173 Q68.5 2177
+                72.5 2177
+                L79 2177 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2174 L87, 2177 L79, 2180 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2221.5 Q68.5 2225.5
+                72.5 2225.5
+                L79 2225.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2222.5 L87, 2225.5 L79, 2228.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2270 Q68.5 2274
+                72.5 2274
+                L79 2274 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2271 L87, 2274 L79, 2277 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2318.5 Q68.5 2322.5
+                72.5 2322.5
+                L79 2322.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2319.5 L87, 2322.5 L79, 2325.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2367 Q68.5 2371
+                72.5 2371
+                L79 2371 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2368 L87, 2371 L79, 2374 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2415.5 Q68.5 2419.5
+                72.5 2419.5
+                L79 2419.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2416.5 L87, 2419.5 L79, 2422.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2464 Q68.5 2468
+                72.5 2468
+                L79 2468 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2465 L87, 2468 L79, 2471 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2512.5 Q68.5 2516.5
+                72.5 2516.5
+                L79 2516.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2513.5 L87, 2516.5 L79, 2519.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2561 Q68.5 2565
+                72.5 2565
+                L79 2565 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2562 L87, 2565 L79, 2568 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2609.5 Q68.5 2613.5
+                72.5 2613.5
+                L79 2613.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2610.5 L87, 2613.5 L79, 2616.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2658 Q68.5 2662
+                72.5 2662
+                L79 2662 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2659 L87, 2662 L79, 2665 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2706.5 Q68.5 2710.5
+                72.5 2710.5
+                L79 2710.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2707.5 L87, 2710.5 L79, 2713.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2755 Q68.5 2759
+                72.5 2759
+                L79 2759 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2756 L87, 2759 L79, 2762 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2803.5 Q68.5 2807.5
+                72.5 2807.5
+                L79 2807.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2804.5 L87, 2807.5 L79, 2810.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 1949.5 L68.5 2867 Q68.5 2871
+                72.5 2871
+                L79 2871 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 2868 L87, 2871 L79, 2874 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M117, 2901 L117 2922 Q117 2926
+                121 2926
+                L129 2926 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M129, 2923 L137, 2926 L129, 2929 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M403.2, 2871 L439.2 2871  Q443.2 2871
+                443.2 2875
+                L443.2 2933 Q443.2 2941
+                447.2 2941
+                L455.2 2941 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M455.2, 2938 L463.2, 2941 L455.2, 2944 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M493.2, 2971 L493.2 2992 Q493.2 2996
+                497.2 2996
+                L505.20000000000005 2996 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M505.20000000000005, 2993 L513.2, 2996 L505.20000000000005, 2999 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M670.2, 2941 L706.2 2941  Q710.2 2941
+                710.2 2945
+                L710.2 2988 Q710.2 2996
+                714.2 2996
+                L722.2 2996 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M722.2, 2993 L730.2, 2996 L722.2, 2999 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 3042 Q25 3046
+                29 3046
+                L42 3046 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 3043 L50, 3046 L42, 3049 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 3090.5 Q25 3094.5
+                29 3094.5
+                L42 3094.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 3091.5 L50, 3094.5 L42, 3097.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 3109.5 L68.5 3139 Q68.5 3143
+                72.5 3143
+                L87 3143 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M105.5, 3158 L105.5 3187.5 Q105.5 3191.5
+                109.5 3191.5
+                L116 3191.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 3188.5 L124, 3191.5 L116, 3194.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M105.5, 3158 L105.5 3251 Q105.5 3255
+                109.5 3255
+                L116 3255 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 3252 L124, 3255 L116, 3258 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 3306 Q154 3310
+                158 3310
+                L166 3310 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 3307 L174, 3310 L166, 3313 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3325 L192.5 3354.5 Q192.5 3358.5
+                196.5 3358.5
+                L203 3358.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3355.5 L211, 3358.5 L203, 3361.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3325 L192.5 3403 Q192.5 3407
+                196.5 3407
+                L203 3407 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3404 L211, 3407 L203, 3410 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3325 L192.5 3451.5 Q192.5 3455.5
+                196.5 3455.5
+                L203 3455.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3452.5 L211, 3455.5 L203, 3458.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 3500 Q154 3504
+                158 3504
+                L166 3504 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 3501 L174, 3504 L166, 3507 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3519 L192.5 3548.5 Q192.5 3552.5
+                196.5 3552.5
+                L203 3552.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3549.5 L211, 3552.5 L203, 3555.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3519 L192.5 3597 Q192.5 3601
+                196.5 3601
+                L203 3601 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3598 L211, 3601 L203, 3604 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3519 L192.5 3645.5 Q192.5 3649.5
+                196.5 3649.5
+                L203 3649.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3646.5 L211, 3649.5 L203, 3652.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 3694 Q154 3698
+                158 3698
+                L166 3698 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 3695 L174, 3698 L166, 3701 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3713 L192.5 3742.5 Q192.5 3746.5
+                196.5 3746.5
+                L203 3746.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3743.5 L211, 3746.5 L203, 3749.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3713 L192.5 3791 Q192.5 3795
+                196.5 3795
+                L203 3795 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3792 L211, 3795 L203, 3798 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3713 L192.5 3839.5 Q192.5 3843.5
+                196.5 3843.5
+                L203 3843.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3840.5 L211, 3843.5 L203, 3846.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 3888 Q154 3892
+                158 3892
+                L166 3892 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 3889 L174, 3892 L166, 3895 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3907 L192.5 3936.5 Q192.5 3940.5
+                196.5 3940.5
+                L203 3940.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3937.5 L211, 3940.5 L203, 3943.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3907 L192.5 3985 Q192.5 3989
+                196.5 3989
+                L203 3989 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 3986 L211, 3989 L203, 3992 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 3907 L192.5 4033.5 Q192.5 4037.5
+                196.5 4037.5
+                L203 4037.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4034.5 L211, 4037.5 L203, 4040.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 4082 Q154 4086
+                158 4086
+                L166 4086 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 4083 L174, 4086 L166, 4089 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4101 L192.5 4130.5 Q192.5 4134.5
+                196.5 4134.5
+                L203 4134.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4131.5 L211, 4134.5 L203, 4137.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4101 L192.5 4179 Q192.5 4183
+                196.5 4183
+                L203 4183 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4180 L211, 4183 L203, 4186 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4101 L192.5 4227.5 Q192.5 4231.5
+                196.5 4231.5
+                L203 4231.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4228.5 L211, 4231.5 L203, 4234.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 4276 Q154 4280
+                158 4280
+                L166 4280 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 4277 L174, 4280 L166, 4283 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4295 L192.5 4324.5 Q192.5 4328.5
+                196.5 4328.5
+                L203 4328.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4325.5 L211, 4328.5 L203, 4331.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4295 L192.5 4373 Q192.5 4377
+                196.5 4377
+                L203 4377 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4374 L211, 4377 L203, 4380 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4295 L192.5 4421.5 Q192.5 4425.5
+                196.5 4425.5
+                L203 4425.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4422.5 L211, 4425.5 L203, 4428.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 3285 L154 4470 Q154 4474
+                158 4474
+                L166 4474 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 4471 L174, 4474 L166, 4477 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4489 L192.5 4518.5 Q192.5 4522.5
+                196.5 4522.5
+                L203 4522.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4519.5 L211, 4522.5 L203, 4525.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4489 L192.5 4567 Q192.5 4571
+                196.5 4571
+                L203 4571 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4568 L211, 4571 L203, 4574 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M192.5, 4489 L192.5 4615.5 Q192.5 4619.5
+                196.5 4619.5
+                L203 4619.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M203, 4616.5 L211, 4619.5 L203, 4622.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M105.5, 3158 L105.5 4664 Q105.5 4668
+                109.5 4668
+                L116 4668 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 4665 L124, 4668 L116, 4671 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 4712.5 Q25 4716.5
+                29 4716.5
+                L42 4716.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 4713.5 L50, 4716.5 L42, 4719.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 4731.5 L68.5 4761 Q68.5 4765
+                72.5 4765
+                L87 4765 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               false
+            </g>
+            <g>
+               <path d="M105.5, 4780 L105.5 4824.5 Q105.5 4828.5
+                109.5 4828.5
+                L116 4828.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 4825.5 L124, 4828.5 L116, 4831.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 4858.5 L154 4879.5 Q154 4883.5
+                158 4883.5
+                L166 4883.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 4880.5 L174, 4883.5 L166, 4886.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M105.5, 4780 L105.5 4929.5 Q105.5 4933.5
+                109.5 4933.5
+                L116 4933.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 4930.5 L124, 4933.5 L116, 4936.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M105.5, 4780 L105.5 4993 Q105.5 4997
+                109.5 4997
+                L116 4997 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M116, 4994 L124, 4997 L116, 5000 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M154, 5027 L154 5048 Q154 5052
+                158 5052
+                L166 5052 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M166, 5049 L174, 5052 L166, 5055 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M299.8, 4997 L396 4997  Q400 4997
+                400 5001
+                L400 5044 Q400 5052
+                404 5052
+                L412 5052 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M412, 5049 L420, 5052 L412, 5055 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 5098 Q25 5102
+                29 5102
+                L42 5102 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 5099 L50, 5102 L42, 5105 Z" fill="#333"></path>
+            </g>
+            </svg>
