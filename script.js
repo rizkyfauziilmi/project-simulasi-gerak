@@ -32,7 +32,7 @@ let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = warnaPlanet.bumi
 let resetOtomatis = false;
 
-function gambarBola() {
+const gambarBola = () => {
     ctx.beginPath();
     ctx.arc(canvas.width / 2, posisi, 10, 0, Math.PI * 2);
     ctx.fillStyle = warnaPlanetSekarang;
@@ -40,11 +40,11 @@ function gambarBola() {
     ctx.closePath();
 }
 
-function bersihkanCanvas() {
+const bersihkanCanvas = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function resetSimulasi() {
+const resetSimulasi = () => {
     tombolReset.style.display = 'none'
     waktu = 0;
     posisi = posisiAwal;
@@ -53,7 +53,7 @@ function resetSimulasi() {
     animasi();
 }
 
-function menampilkanText() {
+const menampilkanText = () => {
     // Hitung jarak antara bola dan ujung bawah canvas
     let jarak = canvas.height - posisi;
     
@@ -67,15 +67,15 @@ function menampilkanText() {
     ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 100);
 }
 
-function menghitungPosisi() {
+const menghitungPosisi = () => {
     posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu ** 2;
 }
 
-function menghitungKecepatan() {
+const menghitungKecepatan = () => {
     kecepatan = kecepatanAwal + gravitasi * waktu;
 }
 
-function animasi() {
+const animasi = () => {
 
     bersihkanCanvas();
 
