@@ -24,7 +24,7 @@ const warnaPlanet = {
 
 // Set parameter awal
 let gravitasi = 9.81;
-const posisiAwal = 1;
+const posisiAwal = 0;
 const kecepatanAwal = 0;
 let waktu = 0;
 let posisi = posisiAwal;
@@ -53,18 +53,10 @@ function resetSimulasi() {
     animasi();
 }
 
-function animasi() {
-    bersihkanCanvas();
-    gambarBola();
-
-    // Perbarui posisi dan kecepatan berdasarkan waktu
-    posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu ** 2;
-    kecepatan = kecepatanAwal + gravitasi * waktu;
-    waktu += 1 / 60;
-
+function menampilkanText() {
     // Hitung jarak antara bola dan ujung bawah canvas
     let jarak = canvas.height - posisi;
-
+    
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.fillStyle = "white";
@@ -73,9 +65,31 @@ function animasi() {
     ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 60);
     ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 80);
     ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 100);
+}
+
+function menghitungPosisi() {
+    posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu ** 2;
+}
+
+function menghitungKecepatan() {
+    kecepatan = kecepatanAwal + gravitasi * waktu;
+}
+
+function animasi() {
+
+    bersihkanCanvas();
+
+    gambarBola();
+
+    // Perbarui posisi dan kecepatan berdasarkan waktu
+    menghitungPosisi();
+    menghitungKecepatan();
+    waktu += 1 / 60;
+
+    menampilkanText()
 
     // Meminta animasi frame berikutnya jika bola belum mencapai ujung bawah canvas
-    if (posisi < canvas.height - 10) {
+    if (posisi < canvas.height) {
         requestAnimationFrame(animasi);
     } else {
         if (resetOtomatis) {
