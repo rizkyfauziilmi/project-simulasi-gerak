@@ -8,28 +8,71 @@ const checkboxResetOtomatis = document.getElementById('checkbox-reset-otomatis')
 canvas.width = 600;
 canvas.height = 400;
 
-const warnaPlanet = {
-    bumi: '#3B3B98',
-    bulan: '#BDC3C7',
-    mars: '#E74C3C',
-    jupiter: '#F1C40F',
-    neptunus: '#2980B9',
-    venus: '#F5B041',
-    matahari: '#FFA500',
-    merkurius: '#C0C0C0',
-    saturnus: '#FFD700',
-    uranus: '#7FFFD4'
-}
+// Set data planet
+const dataPlanet = [
+    {
+        nama: "bumi",
+        warna: '#3B3B98',
+        gravitasi: 9.81
+    },
+    {
+        nama: "bulan",
+        warna: '#BDC3C7',
+        gravitasi: 1.62
+    },
+    {
+        nama: "mars",
+        warna: '#E74C3C',
+        gravitasi: 3.72
+    },
+    {
+        nama: "jupiter",
+        warna: '#F1C40F',
+        gravitasi: 24.79
+    },
+    {
+        nama: "neptunus",
+        warna: '#2980B9',
+        gravitasi: 11.15
+    },
+    {
+        nama: "venus",
+        warna: '#F5B041',
+        gravitasi: 8.87
+    },
+    {
+        nama: "matahari",
+        warna: '#FFA500',
+        gravitasi: 274
+    },
+    {
+        nama: "merkurius",
+        warna: '#C0C0C0',
+        gravitasi: 3.7
+    },
+    {
+        nama: "saturnus",
+        warna: '#FFD700',
+        gravitasi: 10.44
+    },
+    {
+        nama: "uranus",
+        warna: '#7FFFD4',
+        gravitasi: 8.87
+    },
+]
 
+// Mendapatkan data bumi untuk initial value 
+const dataBumi = dataPlanet.filter((value) => value.nama === "bumi")[0]
 
-// Set parameter awal
-let gravitasi = 9.81;
+// Set variable awal
+let gravitasi = dataBumi.gravitasi;
 const posisiAwal = 0;
 const kecepatanAwal = 0;
 let waktu = 0;
 let posisi = posisiAwal;
 let kecepatan = kecepatanAwal;
-let warnaPlanetSekarang = warnaPlanet.bumi
+let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
 
 const gambarBola = () => {
@@ -104,55 +147,20 @@ const animasi = () => {
 document.getElementById('planet').addEventListener('change', (e) => {
 
     const planet = e.target.value;
-    switch (planet) {
-        case 'bumi':
-            gravitasi = 9.81;
-            warnaPlanetSekarang = warnaPlanet.bumi;
-            break;
-        case 'bulan':
-            gravitasi = 1.62;
-            warnaPlanetSekarang = warnaPlanet.bulan;
-            break;
-        case 'merkurius':
-            gravitasi = 3.7;
-            warnaPlanetSekarang = warnaPlanet.merkurius;
-            break;
-        case 'saturnus':
-            gravitasi = 10.44;
-            warnaPlanetSekarang = warnaPlanet.saturnus
-            break;
-        case 'uranus':
-            gravitasi = 8.87;
-            warnaPlanetSekarang = warnaPlanet.uranus;
-            break;
-        case 'mars':
-            gravitasi = 3.72;
-            warnaPlanetSekarang = warnaPlanet.mars;
-            break;
-        case 'jupiter':
-            gravitasi = 24.79;
-            warnaPlanetSekarang = warnaPlanet.jupiter;
-            break;
-        case 'neptunus':
-            gravitasi = 11.15;
-            warnaPlanetSekarang = warnaPlanet.neptunus;
-            break;
-        case 'venus':
-            gravitasi = 8.87;
-            warnaPlanetSekarang = warnaPlanet.venus;
-            break;
-        case 'matahari':
-            gravitasi = 274;
-            warnaPlanetSekarang = warnaPlanet.matahari;
-            break;
-    }
 
-    resetSimulasi();
+    dataPlanet.map((value) => {
+        if (value.nama === planet) {
+            gravitasi = value.gravitasi;
+            warnaPlanetSekarang = value.warna
+            resetSimulasi();
+        }
+    })
 })
 
 // Tambahkan event listener pada checkbox
 checkboxResetOtomatis.addEventListener('change', (e) => {
-    if (!(posisi < canvas.height - 10)) {
+    // jika user mengganti nilai checkbox saat bola sudah mengenai canvas dan reset otamatis tidak nyala maka akan reset simulasi
+    if (!(posisi < canvas.height) && !resetOtomatis) {
         resetSimulasi()
     }
 
