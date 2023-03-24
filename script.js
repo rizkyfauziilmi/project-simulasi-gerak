@@ -99,23 +99,25 @@ const resetSimulasi = () => {
 const menampilkanText = () => {
     // Hitung jarak antara bola dan ujung bawah canvas
     let jarak = canvas.height - posisi;
-    
+
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.fillStyle = "white";
     ctx.fillText(`Gravitasi: ${gravitasi.toFixed(2)} m / s²`, 10, 20);
     ctx.fillText(`Posisi awal: ${canvas.height.toFixed(2)} m`, 10, 40);
-    ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 60);
-    ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 80);
-    ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 100);
+    ctx.fillText(`Posisi: ${posisi.toFixed(2)} m`, 10, 60);
+    ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 80);
+    ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 100);
+    ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 120);
 }
 
 const menghitungPosisi = () => {
-    posisi = posisiAwal + kecepatanAwal * waktu + 0.5 * gravitasi * waktu ** 2;
+    //* rumus menjadi + karena dalam canvas bagian paling atas dimulai dari 0
+    posisi = posisiAwal + (0.5 * gravitasi * waktu ** 2) + (kecepatanAwal * waktu); 
 }
 
 const menghitungKecepatan = () => {
-    kecepatan = kecepatanAwal + gravitasi * waktu;
+    kecepatan = Math.abs(-gravitasi * waktu); 
 }
 
 const animasi = () => {
