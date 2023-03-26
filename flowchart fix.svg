@@ -1,0 +1,214 @@
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1056" height="665" shape-rendering="optimizeSpeed">
+                
+            <g>
+                <rect x="50" y="80" width="190.4" height="30" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></rect>
+                    
+                <line x1="60" y1="80" x2="60" y2="110" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+                <line x1="230.4" y1="80" x2="230.4" y2="110" style="fill:#a5d6a7; stroke:#444; stroke-width:1"></line>
+             
+                <title>function animasi()</title>
+            <text x="75" y="100" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">function animasi()</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5" width="162.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>bersihkanCanvas()</title>
+            <text x="102" y="148.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">bersihkanCanvas()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="177" width="123.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>gambarBola()</title>
+            <text x="102" y="197" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="197">gambarBola()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="225.5" width="170.4" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>menghitungPosisi()</title>
+            <text x="102" y="245.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="245.5">menghitungPosisi()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="274" width="193.79999999999998" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>menghitungKecepatan()</title>
+            <text x="102" y="294" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="294">menghitungKecepatan()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="322.5" width="147" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>waktu += 1 / 60</title>
+            <text x="102" y="342.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="342.5">waktu += 1 / 60</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="371" width="162.6" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>menampilkanText()</title>
+            <text x="102" y="391" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="391">menampilkanText()</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="117" y="434.5" width="247.2" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="87,449.5 117,419.5 147,449.5 117,479.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(posisi &lt; canvas.height)</title>
+            <text x="162" y="454.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="454.5">(posisi &lt; canvas.height)</tspan>
+            </text>
+            
+            <text x="109.2" y="454.5" font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="481.45" font-family="monospace" font-size="13" fill="#222">+</text> <text x="368.09999999999997" y="447.55" font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="137" y="489.5" width="264" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>requestAnimationFrame(animasi)</title>
+            <text x="152" y="509.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="509.5">requestAnimationFrame(animasi)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="491" y="504.5" width="177" height="30" rx="3" ry="3" style="fill:#ce93d8; stroke:#444; stroke-width:1"></rect>                
+            <polygon points="461,519.5 491,489.5 521,519.5 491,549.5" style="fill:#ce93d8; stroke:#444; stroke-width:1"></polygon>
+            <title>(resetOtomatis)</title>
+            <text x="536" y="524.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="536" y="524.5">(resetOtomatis)</tspan>
+            </text>
+            
+            <text x="483.2" y="524.5" font-family="monospace" font-size="13" fill="#222">if</text> <text x="498.8" y="551.45" font-family="monospace" font-size="13" fill="#222">+</text> <text x="671.9" y="517.55" font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="511" y="559.5" width="147" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>resetSimulasi()</title>
+            <text x="526" y="579.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="526" y="579.5">resetSimulasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="728" y="559.5" width="303" height="30" rx="3" ry="3" style="fill:#90caf9; stroke:#444; stroke-width:1"></rect>
+                   <title>tombolReset.style.display = 'block'</title>
+            <text x="743" y="579.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="743" y="579.5">tombolReset.style.display = 'block'</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="609.5" width="100.2" height="30" rx="2" ry="2" style="fill:#C5E1A5; stroke:#444; stroke-width:1"></rect>
+                   <title>animasi()</title>
+            <text x="65" y="629.5" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="629.5">animasi()</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75" width="216.6" height="24" style="fill:#fff59d; stroke:#444; stroke-width:1"></rect>
+               <circle cx="25" cy="25" r="15" style="fill:#fff59d; stroke:#444; stroke-width:1"></circle>
+               <title>Program: source module</title>
+            <text x="55" y="30" font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 92 L50, 95 L42, 98 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 188 Q68.5 192
+                72.5 192
+                L79 192 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 189 L87, 192 L79, 195 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 236.5 Q68.5 240.5
+                72.5 240.5
+                L79 240.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 237.5 L87, 240.5 L79, 243.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 285 Q68.5 289
+                72.5 289
+                L79 289 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 286 L87, 289 L79, 292 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 333.5 Q68.5 337.5
+                72.5 337.5
+                L79 337.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 334.5 L87, 337.5 L79, 340.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 382 Q68.5 386
+                72.5 386
+                L79 386 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 383 L87, 386 L79, 389 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 445.5 Q68.5 449.5
+                72.5 449.5
+                L79 449.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M79, 446.5 L87, 449.5 L79, 452.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M117, 479.5 L117 500.5 Q117 504.5
+                121 504.5
+                L129 504.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M129, 501.5 L137, 504.5 L129, 507.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M364.2, 449.5 L437 449.5  Q441 449.5
+                441 453.5
+                L441 511.5 Q441 519.5
+                445 519.5
+                L453 519.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M453, 516.5 L461, 519.5 L453, 522.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M491, 549.5 L491 570.5 Q491 574.5
+                495 574.5
+                L503 574.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M503, 571.5 L511, 574.5 L503, 577.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M668, 519.5 L704 519.5  Q708 519.5
+                708 523.5
+                L708 566.5 Q708 574.5
+                712 574.5
+                L720 574.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M720, 571.5 L728, 574.5 L720, 577.5 Z" fill="#333"></path>
+            </g>
+            <g>
+               <path d="M25, 40 L25 620.5 Q25 624.5
+                29 624.5
+                L42 624.5 " style="fill:none; stroke:#444; stroke-width:1"></path>
+               <path d="M42, 621.5 L50, 624.5 L42, 627.5 Z" fill="#333"></path>
+            </g>
+            </svg>
