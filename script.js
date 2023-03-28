@@ -103,12 +103,12 @@ const menampilkanText = () => {
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.fillStyle = "white";
-    ctx.fillText(`Gravitasi: ${gravitasi.toFixed(2)} m / s²`, 10, 20);
-    ctx.fillText(`Posisi awal: ${canvas.height.toFixed(2)} m`, 10, 40);
-    ctx.fillText(`Posisi: ${posisi.toFixed(2)} m`, 10, 60);
-    ctx.fillText(`Waktu: ${waktu.toFixed(2)} s`, 10, 80);
-    ctx.fillText(`Kecepatan: ${kecepatan.toFixed(2)} m / s`, 10, 100);
-    ctx.fillText(`Jarak ke ujung bawah canvas: ${jarak.toFixed(2)} m`, 10, 120);
+    ctx.fillText(`Gravitasi (g): ${gravitasi.toFixed(2)} m / s²`, 10, 20);
+    ctx.fillText(`Posisi awal (Yo): ${canvas.height.toFixed(2)} m`, 10, 40);
+    ctx.fillText(`Waktu (t): ${waktu.toFixed(2)} s`, 10, 80);
+    ctx.fillText(`Kecepatan Vy(${waktu.toFixed(1)}): ${kecepatan.toFixed(2)} m / s`, 10, 60);
+    ctx.fillText(`Posisi bola di dalam canvas: ${posisi.toFixed(2)} m`, 10, 100);
+    ctx.fillText(`Posisi bola di dunia nyata Y(${waktu.toFixed(1)}): ${jarak.toFixed(2)} m`, 10, 120);
 }
 
 const menghitungPosisi = () => {
