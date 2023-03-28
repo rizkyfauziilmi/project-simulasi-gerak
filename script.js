@@ -66,18 +66,19 @@ const dataPlanet = [
 const dataBumi = dataPlanet.filter((value) => value.nama === "bumi")[0]
 
 // Set variable awal
-let gravitasi = dataBumi.gravitasi;
 const posisiAwal = 0;
 const kecepatanAwal = 0;
+let gravitasi = dataBumi.gravitasi;
 let waktu = 0;
-let posisi = posisiAwal;
+let posisiCanvas = posisiAwal;
+let posisiNyata = posisiAwal;
 let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
 
 const gambarBola = () => {
     ctx.beginPath();
-    ctx.arc(canvas.width / 2, posisi, 10, 0, Math.PI * 2);
+    ctx.arc(canvas.width / 2, posisiCanvas, 10, 0, Math.PI * 2);
     ctx.fillStyle = warnaPlanetSekarang;
     ctx.fill();
     ctx.closePath();
@@ -90,15 +91,13 @@ const bersihkanCanvas = () => {
 const resetSimulasi = () => {
     tombolReset.style.display = 'none'
     waktu = 0;
-    posisi = posisiAwal;
+    posisiCanvas = posisiAwal;
     kecepatan = kecepatanAwal;
     bersihkanCanvas();
     animasi();
 }
 
 const menampilkanText = () => {
-    // Hitung jarak antara bola dan ujung bawah canvas
-    let jarak = canvas.height - posisi;
 
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
@@ -107,13 +106,17 @@ const menampilkanText = () => {
     ctx.fillText(`Posisi awal (Yo): ${canvas.height.toFixed(2)} m`, 10, 40);
     ctx.fillText(`Waktu (t): ${waktu.toFixed(2)} s`, 10, 80);
     ctx.fillText(`Kecepatan Vy(${waktu.toFixed(1)}): ${kecepatan.toFixed(2)} m / s`, 10, 60);
-    ctx.fillText(`Posisi bola di dalam canvas: ${posisi.toFixed(2)} m`, 10, 100);
-    ctx.fillText(`Posisi bola di dunia nyata Y(${waktu.toFixed(1)}): ${jarak.toFixed(2)} m`, 10, 120);
+    ctx.fillText(`Posisi bola di dalam canvas: ${posisiCanvas.toFixed(2)} m`, 10, 100);
+    ctx.fillText(`Posisi bola di dunia nyata Y(${waktu.toFixed(1)}): ${posisiNyata.toFixed(2)} m`, 10, 120);
 }
 
 const menghitungPosisi = () => {
+    // menghitung posisi bola di canvas
     //* rumus menjadi + karena dalam canvas bagian paling atas dimulai dari 0
-    posisi = posisiAwal + (0.5 * gravitasi * waktu ** 2) + (kecepatanAwal * waktu); 
+    posisiCanvas = posisiAwal + (0.5 * gravitasi * waktu ** 2) + (kecepatanAwal * waktu); 
+
+    // menghitung posisi bola di dunia nyata
+    posisiNyata = canvas.height - posisiCanvas;
 }
 
 const menghitungKecepatan = () => {
@@ -129,12 +132,14 @@ const animasi = () => {
     // Perbarui posisi dan kecepatan berdasarkan waktu
     menghitungPosisi();
     menghitungKecepatan();
+
+    // Increment waktu
     waktu += 1 / 60;
 
     menampilkanText()
 
     // Meminta animasi frame berikutnya jika bola belum mencapai ujung bawah canvas
-    if (posisi < canvas.height) {
+    if (posisiCanvas < canvas.height) {
         requestAnimationFrame(animasi);
     } else {
         if (resetOtomatis) {
@@ -162,7 +167,7 @@ document.getElementById('planet').addEventListener('change', (e) => {
 // Tambahkan event listener pada checkbox
 checkboxResetOtomatis.addEventListener('change', (e) => {
     // jika user mengganti nilai checkbox saat bola sudah mengenai canvas dan reset otamatis tidak nyala maka akan reset simulasi
-    if (!(posisi < canvas.height) && !resetOtomatis) {
+    if (!(posisiCanvas < canvas.height) && !resetOtomatis) {
         resetSimulasi()
     }
 
