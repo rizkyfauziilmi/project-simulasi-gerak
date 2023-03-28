@@ -1,8 +1,9 @@
 // Mengambil elemen yang dibutuhkan
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const tombolReset = document.getElementById('reset-button')
-const checkboxResetOtomatis = document.getElementById('checkbox-reset-otomatis')
+const tombolReset = document.getElementById('reset-button');
+const checkboxResetOtomatis = document.getElementById('checkbox-reset-otomatis');
+const checkboxTampilkanSatuan = document.getElementById('checkbox-tampilkan-satuan');
 
 // Set ukuran canvas
 canvas.width = 600;
@@ -75,6 +76,7 @@ let posisiNyata = posisiAwal;
 let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
+let tamplikanSatuan = true;
 
 const gambarBola = () => {
     ctx.beginPath();
@@ -102,25 +104,25 @@ const menampilkanText = () => {
     // Tampilkan nilai variabel di atas canvas
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.fillStyle = "white";
-    ctx.fillText(`Gravitasi (g): ${gravitasi.toFixed(2)} m / s²`, 10, 20);
-    ctx.fillText(`Posisi awal (Yo): ${canvas.height.toFixed(2)} m`, 10, 40);
-    ctx.fillText(`Waktu (t): ${waktu.toFixed(2)} s`, 10, 80);
-    ctx.fillText(`Kecepatan Vy(${waktu.toFixed(1)}): ${kecepatan.toFixed(2)} m / s`, 10, 60);
+    ctx.fillText(`Gravitasi ${tamplikanSatuan ? "(g)" : ""}: ${gravitasi.toFixed(2)} m / s²`, 10, 20);
+    ctx.fillText(`Posisi awal ${tamplikanSatuan ? "(Yo)" : ""}: ${canvas.height.toFixed(2)} m`, 10, 40);
+    ctx.fillText(`Waktu ${tamplikanSatuan ? "(t)" : ""}: ${waktu.toFixed(2)} s`, 10, 80);
+    ctx.fillText(`Kecepatan ${tamplikanSatuan ? `Vy(${waktu.toFixed(1)})` : ""}: ${kecepatan.toFixed(2)} m / s`, 10, 60);
     ctx.fillText(`Posisi bola di dalam canvas: ${posisiCanvas.toFixed(2)} m`, 10, 100);
-    ctx.fillText(`Posisi bola di dunia nyata Y(${waktu.toFixed(1)}): ${posisiNyata.toFixed(2)} m`, 10, 120);
+    ctx.fillText(`Posisi bola di dunia nyata ${tamplikanSatuan ? `Y(${waktu.toFixed(1)})` : ""}: ${posisiNyata.toFixed(2)} m`, 10, 120);
 }
 
 const menghitungPosisi = () => {
     // menghitung posisi bola di canvas
     //* rumus menjadi + karena dalam canvas bagian paling atas dimulai dari 0
-    posisiCanvas = posisiAwal + (0.5 * gravitasi * waktu ** 2) + (kecepatanAwal * waktu); 
+    posisiCanvas = posisiAwal + (0.5 * gravitasi * waktu ** 2) + (kecepatanAwal * waktu);
 
     // menghitung posisi bola di dunia nyata
     posisiNyata = canvas.height - posisiCanvas;
 }
 
 const menghitungKecepatan = () => {
-    kecepatan = Math.abs(-gravitasi * waktu); 
+    kecepatan = Math.abs(-gravitasi * waktu);
 }
 
 const animasi = () => {
@@ -150,7 +152,7 @@ const animasi = () => {
     }
 }
 
-// Tambahkan event listener pada select option
+// TEvent listener pada select option
 document.getElementById('planet').addEventListener('change', (e) => {
 
     const planet = e.target.value;
@@ -164,7 +166,7 @@ document.getElementById('planet').addEventListener('change', (e) => {
     })
 })
 
-// Tambahkan event listener pada checkbox
+// Event listener pada checkbox reset otomatis
 checkboxResetOtomatis.addEventListener('change', (e) => {
     // jika user mengganti nilai checkbox saat bola sudah mengenai canvas dan reset otamatis tidak nyala maka akan reset simulasi
     if (!(posisiCanvas < canvas.height) && !resetOtomatis) {
@@ -178,6 +180,17 @@ checkboxResetOtomatis.addEventListener('change', (e) => {
         resetOtomatis = false
     }
 });
+
+// Event listener pada checkbox tamplikan satuan
+checkboxTampilkanSatuan.addEventListener('change', (e) => {
+    const isChecked = e.target.checked
+
+    if (isChecked) {
+        tamplikanSatuan = true;
+    } else {
+        tamplikanSatuan = false;
+    }
+})
 
 
 animasi();
