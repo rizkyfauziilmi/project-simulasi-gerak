@@ -72,7 +72,7 @@ const kecepatanAwal = 0;
 let gravitasi = dataBumi.gravitasi;
 let waktu = 0;
 let posisiCanvas = posisiAwal;
-let posisiNyata = posisiAwal;
+let posisiNyata = canvas.height;
 let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
@@ -94,6 +94,7 @@ const resetSimulasi = () => {
     tombolReset.style.display = 'none'
     waktu = 0;
     posisiCanvas = posisiAwal;
+    posisiNyata = canvas.height;
     kecepatan = kecepatanAwal;
     bersihkanCanvas();
     animasi();
