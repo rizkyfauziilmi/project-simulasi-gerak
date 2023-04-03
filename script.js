@@ -107,10 +107,11 @@ const menampilkanText = () => {
     ctx.fillStyle = "white";
     ctx.fillText(`Gravitasi ${tamplikanSatuan ? "(g)" : ""}: ${gravitasi.toFixed(2)} m / s²`, 10, 20);
     ctx.fillText(`Posisi awal ${tamplikanSatuan ? "(Yo)" : ""}: ${canvas.height.toFixed(2)} m`, 10, 40);
-    ctx.fillText(`Waktu ${tamplikanSatuan ? "(t)" : ""}: ${waktu.toFixed(2)} s`, 10, 80);
+    ctx.fillText(`Waktu ${tamplikanSatuan ? "(t)" : ""}: ${waktu.toFixed(1)} s`, 10, 80);
     ctx.fillText(`Kecepatan ${tamplikanSatuan ? `Vy(${waktu.toFixed(1)})` : ""}: ${kecepatan.toFixed(2)} m / s`, 10, 60);
-    ctx.fillText(`Posisi bola di dalam canvas: ${posisiCanvas.toFixed(2)} m`, 10, 100);
-    ctx.fillText(`Posisi bola di dunia nyata ${tamplikanSatuan ? `Y(${waktu.toFixed(1)})` : ""}: ${posisiNyata.toFixed(2)} m`, 10, 120);
+    // * membulatkan nilai untuk mengatasi border canvas
+    ctx.fillText(`Posisi bola di dalam canvas: ${posisiCanvas <= canvas.height ? posisiCanvas.toFixed(2) : Math.floor(posisiCanvas.toFixed(2))} m`, 10, 100);
+    ctx.fillText(`Posisi bola di dunia nyata ${tamplikanSatuan ? `Y(${waktu.toFixed(1)})` : ""}: ${posisiCanvas <= canvas.height ? posisiNyata.toFixed(2) : Math.ceil(posisiNyata.toFixed(2))} m`, 10, 120);
 }
 
 const menghitungPosisi = () => {
