@@ -16,12 +16,14 @@ cd project-simulasi-gerak-jatuh-bebas
 * Pilih planet yang ingin Anda gunakan pada dropdown menu.
 * Tekan tombol "Reset" untuk memulai simulasi dari awal.
 * Centang opsi "Reset Otomatis" untuk mengaktifkan reset otomatis setelah bola mencapai ujung bawah canvas.
+* Centang opsi "Tampilkan Satuan" unutuk menampilkan satuan di UI.
 * Tekan tombol "Reset" jika opsi "Reset Otomatis" tidak diaktifkan dan bola telah mencapai ujung bawah canvas.
 
 ## Fitur: 
 * Memilih planet dengan gravitasi yang berbeda-beda
 * Menampilkan nilai variabel posisi, kecepatan, waktu, dan jarak ke ujung bawah canvas pada saat tertentu
 * Opsi reset otomatis setelah bola mencapai ujung bawah canvas
+* Opsi untuk menampilkan satuan
 
 ## Teknologi yang digunakan:
 * HTML untuk membuat struktur halaman web
