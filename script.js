@@ -187,10 +187,17 @@ checkboxResetOtomatis.addEventListener('change', (e) => {
 checkboxTampilkanSatuan.addEventListener('change', (e) => {
     const isChecked = e.target.checked
 
+    
     if (isChecked) {
         tamplikanSatuan = true;
     } else {
         tamplikanSatuan = false;
+    }
+
+    if (!(posisiCanvas < canvas.height)) {
+        bersihkanCanvas();
+        gambarBola();
+        menampilkanText();
     }
 })
 
