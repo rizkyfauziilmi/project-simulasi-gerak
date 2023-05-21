@@ -17,16 +17,19 @@ canvas.width = 600;
 canvas.height = 400;
 
 // Set data planet
+/* Gravitasi saturnus, neptunus, matahari, seharusnya: 10.44, 11.15, 274 
+   gravitasi dikurang -0.1% atau -0.2% agar tidak menimbulkan bug animasi
+*/
 const dataPlanet = [
   new Planet("bumi", "#3B3B98", 9.81),
   new Planet("bulan", "#BDC3C7", 1.62),
   new Planet("mars", "#E74C3C", 3.72),
   new Planet("jupiter", "#F1C40F", 24.79),
-  new Planet("neptunus", "#2980B9", 11.15),
+  new Planet("neptunus", "#2980B9", 11.14),
   new Planet("venus", "#F5B041", 8.87),
-  new Planet("matahari", "#FFA500", 274),
+  new Planet("matahari", "#FFA500", 272),
   new Planet("merkurius", "#C0C0C0", 3.7),
-  new Planet("saturnus", "#FFD700", 10.44),
+  new Planet("saturnus", "#FFD700", 10.43),
   new Planet("uranus", "#7FFFD4", 8.87),
 ];
 
@@ -190,7 +193,7 @@ const animasi = () => {
 
   // Meminta frame berikutnya jika bola belum mencapai ujung bawah canvas
   if (posisiCanvas < canvas.height) {
-    //! DO NOT delete: important code to prevent bug
+    //! JANGAN HAPUS: untuk mencegah user mengganti planet saat simulasi berjalan agar tidak menimbulkan bug
     selectPlanet.disabled = true;
 
     selectPlanet.style.opacity = 0.5;
