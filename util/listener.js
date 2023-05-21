@@ -1,5 +1,5 @@
 // Event listener pada select option
-document.getElementById("planet").addEventListener("change", (e) => {
+selectPlanet.addEventListener("change", (e) => {
   const planet = e.target.value;
 
   dataPlanet.map((value) => {
@@ -45,5 +45,5 @@ document.getElementById("github-button").addEventListener("click", () => {
 
 // Event listener untuk window refresh => reset simulasi
 window.addEventListener("load", () => {
-  resetSimulasi();
+  selectPlanet.value = "bumi";
 });
