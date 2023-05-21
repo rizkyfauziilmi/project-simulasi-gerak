@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Simulasi Gerak Jatuh Bebas</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
   </head>
   <body>
     <h1>Simulasi Gerak Jatuh Bebas</h1>
+    <div class="github-container">
+      <button id="github-button"><i class="fa fa-github"></i> Github Repository</button>
+      <div class="github-detail-container">
+        <i class="fa fa-code-fork" id="fork-count" aria-hidden="true"></i>
+        <i class="fa fa-star" id="star-count" aria-hidden="true"></i>
+      </div>
+      <p id="github-releases-version-count">Version: 1.0</p>
+    </div>
     <div class="container">
       <canvas id="canvas"></canvas>
       <div class="input-container">
-        <label for="planet">Pilih planet:</label>
-        <select id="planet">
-          <option value="bumi">Bumi</option>
-          <option value="merkurius">Merkurius</option>
-          <option value="venus">Venus</option>
-          <option value="bulan">Bulan</option>
-          <option value="mars">Mars</option>
-          <option value="jupiter">Jupiter</option>
-          <option value="saturnus">Saturnus</option>
-          <option value="uranus">Uranus</option>
-          <option value="neptunus">Neptunus</option>
-          <option value="matahari">Matahari</option>
-        </select>
-        <br />
-        <label for="checkbox-reset-otomatis" class="label-reset-otomatis"
-          >Otomatis Reset</label
+        <div class="setting">
+          <div class="select">
+            <select id="planet" name="planet">
+              <option value="bumi">Bumi</option>
+              <option value="merkurius">Merkurius</option>
+              <option value="venus">Venus</option>
+              <option value="bulan">Bulan</option>
+              <option value="mars">Mars</option>
+              <option value="jupiter">Jupiter</option>
+              <option value="saturnus">Saturnus</option>
+              <option value="uranus">Uranus</option>
+              <option value="neptunus">Neptunus</option>
+              <option value="matahari">Matahari</option>
+            </select>
+          </div>
+          <div class="checkbox-reset-container">
+            <label for="checkbox-reset-otomatis" class="label-reset-otomatis"
+              >Otomatis Reset</label
+            >
+            <input
+              type="checkbox"
+              id="checkbox-reset-otomatis"
+              value="nilai-checkbox"
+            />
+          </div>
+          <div class="checkbox-tampilkan-container">
+            <label
+              for="checkbox-tampilkan-satuan"
+              class="label-tampilkan-satuan"
+              >Tampilkan Satuan</label
+            >
+            <input
+              type="checkbox"
+              checked
+              id="checkbox-tampilkan-satuan"
+              value="nilai-checkbox"
+            />
+          </div>
+          <div class="detail-perhitungan-container">
+            <p class="title">detail perhitungan</p>
+            <p>Posisi setiap saat:</p>
+            <p id="posisi-setiap-saat-text">Y(t) = Yo - 1/2gt^2 + Vo.t</p>
+            <p>Kecepatan setiap saat:</p>
+            <p id="kecepatan-setiap-saat-text">Vy(t) = -g * t</p>
+          </div>
+        </div>
+        <button
+          class="reset-button"
+          type="reset"
+          id="reset-button"
+          onclick="resetSimulasi()"
         >
-        <input
-          type="checkbox"
-          id="checkbox-reset-otomatis"
-          value="nilai-checkbox"
-        />
-        <label for="checkbox-tampilkan-satuan" class="label-tampilkan-satuan"
-          >Tampilkan Satuan</label
-        >
-        <input
-          type="checkbox"
-          checked
-          id="checkbox-tampilkan-satuan"
-          value="nilai-checkbox"
-        />
-        <br />
-        <button type="reset" id="reset-button" onclick="resetSimulasi()">
           Reset
         </button>
       </div>
       <br />
     </div>
-    <div class="rumus-container">
-      <h4>Rumus</h4>
-      <ul>
-        <li>
-          Y(t) = Yo - 1/2gt^2 + Vo.t
-        </li>
-        <li>Vy(t) = -g * t</li>
-      </ul>
+    <div class="description">
+      <div class="rumus-container">
+        <ul>
+          <li>Y(t) = Yo - 1/2gt^2 + Vo.t</li>
+          <li>Vy(t) = -g * t</li>
+        </ul>
+      </div>
+      <p id="copyright">
+        Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.
+      </p>
     </div>
-    <p id="copyright">
-      Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.
-    </p>
+    <script src="githubAPI.js"></script>
+    <script src="planet.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
