@@ -1,35 +1,85 @@
-# Simulasi Gerak Jatuh Bebas
-Gravity Simulation adalah aplikasi web sederhana yang memungkinkan pengguna untuk mensimulasikan gerakan bola jatuh bebas di planet yang berbeda dengan gravitasi yang berbeda pula.
-Aplikasi ini dibuat sebagai bagian dari tugas project kuliah dan menggunakan bahasa pemrograman JavaScript dan library DOM untuk memanipulasi elemen HTML.
+<br/>
+<p align="center">
+  <a href="https://github.com/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas">
+    <img src="https://raw.githubusercontent.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas/3dec78b8ac5170d932c91b5ca389229f0e05f6c1/public/gravitation.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Instalasi: 
-```bash
+  <h3 align="center">Simulasi Gerak Jatuh Bebas dengan HTML5 canvas dan Javascript</h3>
+
+  <p align="center">
+    <a href="https://github.com/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas">View Demo</a>
+    .
+    <a href="https://github.com/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas/issues">Report Bug</a>
+    .
+    <a href="https://github.com/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas/issues">Request Feature</a>
+  </p>
+</p>
+
+![Contributors](https://img.shields.io/github/contributors/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas?color=dark-green) ![Forks](https://img.shields.io/github/forks/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas?style=social) ![Stargazers](https://img.shields.io/github/stars/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas?style=social) ![License](https://img.shields.io/github/license/RizkyFauziilmi/project-simulasi-gerak-jatuh-bebas) 
+
+## Table Of Contents
+
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Authors](#authors)
+* [Acknowledgements](#acknowledgements)
+
+## About The Project
+
+![Screen Shot](https://raw.githubusercontent.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas/master/public/Screenshot%20from%202023-05-21%2017-46-16.png)
+
+Simulasi Gerak Jatuh Bebas adalah sebuah proyek yang bertujuan untuk mengembangkan aplikasi simulasi interaktif yang memvisualisasikan gerak jatuh bebas dalam fisika. Gerak jatuh bebas adalah fenomena pergerakan benda yang hanya dipengaruhi oleh gravitasi, di mana benda tersebut mengalami percepatan konstan ke arah bawah.
+
+Aplikasi simulasi ini akan memberikan pengguna pengalaman visual dan interaktif untuk memahami prinsip-prinsip dasar gerak jatuh bebas, termasuk pengaruh gravitasi, percepatan, kecepatan, dan perubahan posisi dalam waktu. Melalui simulasi ini, pengguna akan dapat mengobservasi dan memanipulasi berbagai variabel seperti tinggi jatuh, massa benda, dan percepatan gravitasi.
+
+## Built With
+
+* [Javascript](https://www.javascript.com/)
+* [HTML](https://id.wikipedia.org/wiki/HTML)
+* [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+* [CSS](https://devdocs.io/css/)
+* [Github API](https://docs.github.com/en/rest)
+
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+1. Dapatkan GITHUB API Key di [halaman ini](https://github.com/settings/tokens)
+
+2. Clone repositori
+
+```sh
 git clone https://github.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas.git
 ```
-```bash
-cd project-simulasi-gerak-jatuh-bebas
+
+3. Tambahkan Folder bernama `config` dan buat juga didalamnya file `config.js` dengan isi berikut:
+```JS
+const apiKey = "api-key-kamu-disini";
 ```
-* setelah itu jalankan html di local, bisa menggunakan extension seperti live preview, live server, dll. Atau bisa buka file html langsung
 
-## Cara Menggunakan:
-* Buka halaman Gravity Simulation pada browser web Anda.
-* Pilih planet yang ingin Anda gunakan pada dropdown menu.
-* Tekan tombol "Reset" untuk memulai simulasi dari awal.
-* Centang opsi "Reset Otomatis" untuk mengaktifkan reset otomatis setelah bola mencapai ujung bawah canvas.
-* Centang opsi "Tampilkan Satuan" unutuk menampilkan satuan di UI.
-* Tekan tombol "Reset" jika opsi "Reset Otomatis" tidak diaktifkan dan bola telah mencapai ujung bawah canvas.
+4. Terakhir Buka File HTML
 
-## Fitur: 
-* Memilih planet dengan gravitasi yang berbeda-beda
-* Menampilkan nilai variabel posisi, kecepatan, waktu, dan jarak ke ujung bawah canvas pada saat tertentu
-* Opsi reset otomatis setelah bola mencapai ujung bawah canvas
-* Opsi untuk menampilkan satuan
+## Usage
 
-## Teknologi yang digunakan:
-* HTML untuk membuat struktur halaman web
-* CSS untuk styling elemen HTML
-* JavaScript untuk membuat logika aplikasi
-* Library DOM untuk memanipulasi elemen HTML
+Untuk melihat project ini bisa langsung membuka file HTML atau menggunakan extension tambahan seperti: `live server`
 
-Kontributor
-Simulasi Gerak Jatuh Bebas dibuat oleh [Rizky Fauzi Ilmi](https://github.com/RizkyFauziIlmi).
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas/blob/3dec78b8ac5170d932c91b5ca389229f0e05f6c1/LICENSE) for more information.
+
+## Authors
+
+* **Rizky Fauzi Ilmi** - *Informatics Engineering Student at Widyatama University* - [Rizky Fauzi Ilmi](https://github.com/RizkyFauziIlmi) - *Built main code*
+* **Candimadam** - *Informatics Engineering Student at Widyatama University* - [Candimadam](https://github.com/Candimadam) - *Refactor code and Contibutors*
+
+## Acknowledgements
+
+* [Rizky Fauzi Ilmi](https://github.com/RizkyFauziIlmi)
+* [Candimadam](https://github.com/Candimadam)
