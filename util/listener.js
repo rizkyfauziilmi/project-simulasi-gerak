@@ -46,5 +46,6 @@ document.getElementById("github-button").addEventListener("click", () => {
 // Event listener untuk window refresh => reset simulasi
 window.addEventListener("load", () => {
   selectPlanet.value = "bumi";
+  checkboxTampilkanSatuan.checked = true;
   tombolReset.style.display = "none";
 });
