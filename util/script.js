@@ -44,7 +44,6 @@ let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
 let tamplikanSatuan = true;
-let backgroundPosition = 0;
 
 // Fungsi Menggambar Background
 const gambarBackground = () => {
@@ -76,7 +75,6 @@ const bersihkanCanvas = () => {
 // Fungsi Reset Simulasi
 const resetSimulasi = () => {
   tombolReset.style.display = "none";
-  selectPlanet.value = "bumi";
   waktu = 0;
   posisiCanvas = posisiAwal;
   posisiNyata = canvas.height;
@@ -111,7 +109,9 @@ const menampilkanText = () => {
       ? posisiNyata.toFixed(2)
       : Math.ceil(posisiNyata.toFixed(2))
   } m`;
-  document.getElementById('kecepatan-setiap-saat-text').textContent = `Vy(${textWaktu}) = (-${textGravitasi}) * (${textWaktu}) = ${textKecepatan} m / s`
+  document.getElementById(
+    "kecepatan-setiap-saat-text"
+  ).textContent = `Vy(${textWaktu}) = (-${textGravitasi}) * (${textWaktu}) = ${textKecepatan} m / s`;
 
   // Tampilkan nilai variabel di atas canvas
   ctx.font = "bold 13px Arial, sans-serif";
@@ -190,7 +190,7 @@ const animasi = () => {
 
   // Meminta frame berikutnya jika bola belum mencapai ujung bawah canvas
   if (posisiCanvas < canvas.height) {
-    //! DO NOT delete: important code to prevent crash
+    //! DO NOT delete: important code to prevent bug
     selectPlanet.disabled = true;
 
     selectPlanet.style.opacity = 0.5;

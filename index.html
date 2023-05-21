@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Simulasi Gerak Jatuh Bebas</title>
     <link rel="stylesheet" href="style/style.css" />
     <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
@@ -12,10 +15,12 @@
   <body>
     <h1>Simulasi Gerak Jatuh Bebas</h1>
     <div class="github-container">
-      <button id="github-button"><i class="fa fa-github"></i> Github Repository</button>
+      <button id="github-button">
+        <i class="fa fa-github"></i> Github Repository
+      </button>
       <div class="github-detail-container">
-        <i class="fa fa-code-fork" id="fork-count" aria-hidden="true"></i>
-        <i class="fa fa-star" id="star-count" aria-hidden="true"></i>
+        <i class="fa fa-code-fork" id="fork-count" aria-hidden="true">0</i>
+        <i class="fa fa-star" id="star-count" aria-hidden="true">0</i>
       </div>
       <p id="github-releases-version-count">Version: 1.0</p>
     </div>
@@ -25,7 +30,7 @@
         <div class="setting">
           <div class="select">
             <select id="planet" name="planet">
-              <option value="bumi">Bumi</option>
+              <option value="bumi" selected>Bumi</option>
               <option value="merkurius">Merkurius</option>
               <option value="venus">Venus</option>
               <option value="bulan">Bulan</option>
