@@ -46,6 +46,7 @@ let resetOtomatis = false;
 let tamplikanSatuan = true;
 let backgroundPosition = 0;
 
+// Fungsi Menggambar Background
 const gambarBackground = () => {
   ctx.drawImage(backgroundImage, 0, -posisiCanvas, canvas.width, canvas.height);
   ctx.drawImage(
@@ -57,6 +58,7 @@ const gambarBackground = () => {
   );
 };
 
+// Fungsi Menggambar Bola
 const gambarBola = () => {
   ctx.beginPath();
   ctx.arc(canvas.width / 2, posisiCanvas, 10, 0, Math.PI * 2);
@@ -65,11 +67,13 @@ const gambarBola = () => {
   ctx.closePath();
 };
 
+// Fungsi Membersihkan Canvas
 const bersihkanCanvas = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   gambarBackground();
 };
 
+// Fungsi Reset Simulasi
 const resetSimulasi = () => {
   tombolReset.style.display = "none";
   selectPlanet.value = "bumi";
@@ -81,7 +85,9 @@ const resetSimulasi = () => {
   animasi();
 };
 
+// Fungsi Menampilkan Text
 const menampilkanText = () => {
+  // Variable text
   const textGravitasi = gravitasi.toFixed(2);
   const textPosisiAwal = canvas.height.toFixed(2);
   const textWaktu = waktu.toFixed(2);
@@ -95,6 +101,7 @@ const menampilkanText = () => {
       ? posisiNyata.toFixed(2)
       : Math.ceil(posisiNyata.toFixed(2));
 
+  // Detail Perhitungan
   document.getElementById(
     "posisi-setiap-saat-text"
   ).textContent = `Y(${textWaktu}) = (${textPosisiAwal}) - 1/2*(${textGravitasi})*(${textWaktu})^2 + (${kecepatanAwal})*(${waktu.toFixed(
@@ -104,7 +111,6 @@ const menampilkanText = () => {
       ? posisiNyata.toFixed(2)
       : Math.ceil(posisiNyata.toFixed(2))
   } m`;
-
   document.getElementById('kecepatan-setiap-saat-text').textContent = `Vy(${textWaktu}) = (-${textGravitasi}) * (${textWaktu}) = ${textKecepatan} m / s`
 
   // Tampilkan nilai variabel di atas canvas
@@ -149,6 +155,7 @@ const menampilkanText = () => {
   );
 };
 
+// Fungsi Menghitung Posisi Setiap Saat
 const menghitungPosisi = () => {
   // menghitung posisi bola di canvas
   //* rumus menjadi + karena dalam canvas bagian paling atas dimulai dari 0
@@ -159,10 +166,12 @@ const menghitungPosisi = () => {
   posisiNyata = canvas.height - posisiCanvas;
 };
 
+// Menghitung Kecepatan Setiap Saat
 const menghitungKecepatan = () => {
   kecepatan = Math.abs(-gravitasi * waktu);
 };
 
+// Fungsi Animasi
 const animasi = () => {
   bersihkanCanvas();
 
@@ -179,7 +188,7 @@ const animasi = () => {
 
   menampilkanText();
 
-  // Meminta animasi frame berikutnya jika bola belum mencapai ujung bawah canvas
+  // Meminta frame berikutnya jika bola belum mencapai ujung bawah canvas
   if (posisiCanvas < canvas.height) {
     //! DO NOT delete: important code to prevent crash
     selectPlanet.disabled = true;
@@ -198,54 +207,7 @@ const animasi = () => {
   }
 };
 
+// panggil fungsi animasi jika background sudah ter-load
 backgroundImage.onload = function () {
   animasi();
 };
-
-window.addEventListener("load", () => {
-  resetSimulasi();
-});
-
-// TEvent listener pada select option
-document.getElementById("planet").addEventListener("change", (e) => {
-  const planet = e.target.value;
-
-  dataPlanet.map((value) => {
-    if (value.nama === planet) {
-      gravitasi = value.gravitasi;
-      warnaPlanetSekarang = value.warna;
-      resetSimulasi();
-    }
-  });
-});
-
-// Event listener pada checkbox reset otomatis
-checkboxResetOtomatis.addEventListener("change", (e) => {
-  // jika user mengganti nilai checkbox saat bola sudah mengenai canvas dan reset otamatis tidak nyala maka akan reset simulasi
-  if (!(posisiCanvas < canvas.height) && !resetOtomatis) {
-    resetSimulasi();
-  }
-
-  const isChecked = e.target.checked;
-  resetOtomatis = isChecked;
-});
-
-// Event listener pada checkbox tamplikan satuan
-checkboxTampilkanSatuan.addEventListener("change", (e) => {
-  const isChecked = e.target.checked;
-
-  tamplikanSatuan = isChecked;
-
-  if (!(posisiCanvas < canvas.height)) {
-    bersihkanCanvas();
-    gambarBola();
-    menampilkanText();
-  }
-});
-
-document.getElementById("github-button").addEventListener("click", () => {
-  const repositoryLink =
-    "https://github.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas";
-
-  window.open(repositoryLink, "_blank");
-});
