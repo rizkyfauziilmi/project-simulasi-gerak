@@ -21,8 +21,7 @@
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
+* [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Authors](#authors)
@@ -43,11 +42,6 @@ Aplikasi simulasi ini akan memberikan pengguna pengalaman visual dan interaktif 
 * [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 * [CSS](https://devdocs.io/css/)
 * [Github API](https://docs.github.com/en/rest)
-
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
