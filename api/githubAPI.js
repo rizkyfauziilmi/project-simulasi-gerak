@@ -1,6 +1,6 @@
 const owner = "RizkyFauziIlmi";
 const repo = "project-simulasi-gerak-jatuh-bebas";
-const token = "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";
+const token = apiKey;
 
 const apiUrlRepo = `https://api.github.com/repos/${owner}/${repo}`;
 const apiUrlReleases = `https://api.github.com/repos/${owner}/${repo}/releases`;
@@ -22,7 +22,6 @@ fetch(apiUrlRepo, {
     console.error("Terjadi kesalahan (Github API):", error);
   });
 
-
 fetch(apiUrlReleases, {
   headers: {
     Authorization: `Bearer ${token}`,
@@ -34,11 +33,13 @@ fetch(apiUrlReleases, {
       const latestRelease = data[0];
       const releaseVersion = latestRelease.tag_name;
 
-      document.getElementById('github-releases-version-count').textContent = `V${releaseVersion}`;
+      document.getElementById(
+        "github-releases-version-count"
+      ).textContent = `V${releaseVersion}`;
     } else {
       console.log("Tidak ada versi rilis yang tersedia");
     }
   })
   .catch((error) => {
-    console.error("Terjadi kesalahan:", error);
+    console.error("Terjadi kesalahan (Github API):", error);
   });

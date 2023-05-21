@@ -1,3 +1,4 @@
+// Class untuk Objek Planet
 class Planet {
   constructor(nama, warna, gravitasi) {
     this.nama = nama;
