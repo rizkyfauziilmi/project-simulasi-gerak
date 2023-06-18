@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    <link rel="stylesheet" href="/lib/highlight/styles/default.min.css">
+    <link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.min.css" />
+    <title>GERAK PARABOLA</title>
+    <link rel="stylesheet" href="/style/styleGP.css">
+    <link rel="icon" type="imag e/x-icon" href="/public/pavicon2.png" />
+</head>
+<body>
+    <h1>Simulasi Gerak Jatuh Bebas</h1>
+    <div class="github-container">
+        <button id="github-button">
+          <i class="fa fa-github"></i> Github Repository
+        </button>
+        <a href="https://docs.google.com/uc?export=download&id=1Tbyu5nykS4-uUr6aVN-bCQnBnnsUdTJJ" download>
+          <button id="makalah-button"><i class="fa fa-file"></i> Unduh Makalah</button>
+        </a>
+        <div class="github-detail-container">
+          <i class="fa fa-code-fork" id="fork-count" aria-hidden="true">0</i>
+          <i class="fa fa-star" id="star-count" aria-hidden="true">0</i>
+        </div>
+        <p id="github-releases-version-count">Version: 1.0</p>
+    </div>
+    <canvas id="canvas-gerak-parabola"></canvas>
+    <div id="input-container">
+        <label for="input-derajat">Derajat:</label>
+        <input type="number" id="input-derajat" min="0" max="90" value="37">
+        <label for="input-kecepatan-awal">Kecepatan Awal:</label>
+        <input type="number" id="input-kecepatan-awal" min="0" max="250" value="250">
+        <button type="reset" id="reset-button">Reset</button>
+    </div>
+    <a href="../index.html">⬅ Gerak Jatuh Bebas</a>
+    <iframe
+    src="./flowchart2.html"
+    width="900" 
+    height="789"
+    ></iframe>
+    <div id="flowchart-detail">
+      <h2 id="daftar-isi">Deskripsi Fungsi</h2>
+      <ol>
+        <li onclick="scrollToElement('variable')">Variable</li>
+        <li onclick="scrollToElement('hitungX')">Fungsi hitungX</li>
+        <li onclick="scrollToElement('hitungY')">Fungsi hitungY</li>
+          <li onclick="scrollToElement('bersihkanCanvas')">Fungsi bersihkanCanvas</li>
+          <li onclick="scrollToElement('gambarBackground')">Fungsi gambarBackground</li>
+          <li onclick="scrollToElement('textDetail')">Fungsi textDetail</li>
+          <li onclick="scrollToElement('tinggiMaksimum')">Fungsi tinggiMaksimum</li>
+          <li onclick="scrollToElement('gambarBola')">Fungsi gambarBola</li>
+          <li onclick="scrollToElement('gambarJejakBola')">Fungsi gambarJejakBola</li>
+          <li onclick="scrollToElement('enableInput')">Fungsi enableInput</li>
+          <li onclick="scrollToElement('requestAnimationFrame')">Fungsi requestAnimationFrame</li>
+          <li onclick="scrollToElement('disabledInput')">Fungsi disabledInput</li>
+          <li onclick="scrollToElement('tambahWaktu')">Fungsi tambahWaktu</li>
+        </ol>
+        <li id="variable">
+          Variable
+          $$V_{ox} = V_o \cdot \cos(\theta)$$
+          $$V_{oy} = V_o \cdot \sin(\theta)$$
+          $$\text{radians} = \theta \cdot \left(\frac{\pi}{180}\right)$$
+          <pre>
+            <code>
+const degreesToRadians = (degrees) => {
+  return degrees * (Math.PI / 180);
+}
+
+const xAwal = 0;
+const yAwal = 0;
+let gravitasi = 10;
+let kecepatanAwal = 250;
+let elevasi = degreesToRadians(37);
+let satuDetik = (1 / 120) * 10;
+let vox = Math.round(kecepatanAwal * Math.cos(elevasi));
+let voy = Math.round(kecepatanAwal * Math.sin(elevasi));
+let waktu = 0;
+let path = false;
+let x = 0;
+let y = 0;
+
+let posisiBolaSebelumnya = []; // Array untuk menyimpan posisi bola sebelumnya
+            </code>
+          </pre>
+        </li>
+        <li id="hitungX">
+            hitungX()
+            $$X(t) = X_0 + V_{ox} \cdot t$$
+            <pre>
+              <code>
+// Fungsi untuk menghitung nilai x berdasarkan waktu t
+const  = (t = waktu) => {
+    let x = xAwal + vox * t; // Menghitung nilai x dengan rumus xAwal + vox * t
+    x /= 5; // Membagi nilai x dengan 5 untuk skala 1:5
+    return Math.round(x); // Mengembalikan nilai x yang telah dibulatkan
+};
+              </code>
+            </pre>
+          </li>
+          <li id="hitungY">
+            hitungY()
+            $$Y(t) = Y_0 - \frac{1}{2}gt^2 + V_{oy}t$$
+            <pre>
+              <code>
+// Fungsi untuk menghitung nilai y berdasarkan waktu t
+const hitungY = (t = waktu) => {
+    // Menghitung nilai y dengan rumus yAwal - (1/2) * gravitasi * t^2 + voy * t
+    let y = yAwal - (1 / 2) * gravitasi * Math.pow(t, 2) + voy * t; 
+
+    y /= 5; // Membagi nilai y dengan 5 untuk skala 1:5
+    if (y < 0) { // Memeriksa apakah nilai y kurang dari 0
+      y = 0; // Jika iya, maka nilai y diubah menjadi 0
+    }
+    return Math.round(y); // Mengembalikan nilai y yang telah dibulatkan
+};  
+              </code>
+            </pre>
+          </li>
+          <li id="bersihkanCanvas">
+            bersihkanCanvas()
+            <pre>
+              <code>
+// Fungsi untuk menghapus konten di dalam canvas
+const bersihkanCanvas = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Menghapus konten di dalam canvas dengan menggunakan metode clearRect
+};
+              </code>
+            </pre>
+          </li>
+          <li id="gambarBackground">
+            gambarBackground()
+            <pre>
+              <code>
+// set background
+const backgroundImage = new Image();
+backgroundImage.src = "../../public/park.jpg";
+
+// Fungsi untuk menggambar latar belakang pada canvas
+const gambarBackground = () => {
+    // Mengatur nilai transparansi global menjadi 1 (tidak transparan)
+    ctx.globalAlpha = 1; 
+    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+};                
+              </code>
+            </pre>
+          </li>
+          <li id="textDetail">
+            textDetail()
+            <pre>
+              <code>
+// Fungsi untuk menampilkan detail teks pada canvas
+const textDetail = () => {
+    ctx.globalAlpha = 1.0; // Mengatur nilai transparansi global menjadi 1 (tidak transparan)
+    ctx.font = "bold 13px Arial, sans-serif"; // Mengatur properti font untuk teks
+    ctx.fillStyle = "white"; // Mengatur warna isi teks menjadi putih
+    
+    // Menampilkan teks "skala 1 : 5" pada posisi canvas.width - 80, 25
+    ctx.fillText("skala 1 : 5", canvas.width - 80, 25);
+    
+    // Menampilkan teks "Waktu = ..." pada posisi 10, 20
+    ctx.fillText(`Waktu = ${Math.round(waktu)}s`, 10, 20);
+    
+    // Menampilkan teks "Elevasi = ..." pada posisi 10, 40
+    ctx.fillText(
+    `Elevasi = ${Math.round(radiansToDegrees(elevasi))} derajat atau ${elevasi.toFixed(2)} rad`,
+    10,
+    40
+    );
+    
+    // Menampilkan teks "Kecepatan awal = ..." pada posisi 10, 60
+    ctx.fillText(`Kecepatan awal = ${kecepatanAwal} m/s`, 10, 60);
+    
+    // Menampilkan teks "kecepatan Awal sumbu X (Vox) = ..." pada posisi 10, 80
+    ctx.fillText(`kecepatan Awal sumbu X (Vox) = ${vox} m/s`, 10, 80);
+    
+    // Menampilkan teks "kecepatan Awal sumbu Y (Voy) Voy = ..." pada posisi 10, 100
+    ctx.fillText(`kecepatan Awal sumbu Y (Voy) Voy = ${voy} m/s`, 10, 100);
+    
+    // Menampilkan teks "X(...) = ..." pada posisi 10, 120
+    ctx.fillText(`X(${Math.round(waktu)}) = ${convertToRealScala(x)} m`, 10, 120);
+    
+    // Menampilkan teks "Y(...) = ..." pada posisi 10, 140
+    ctx.fillText(`Y(${Math.round(waktu)}) = ${convertToRealScala(y)} m`, 10, 140);
+};                        
+</code>
+</pre>
+          </li>
+          <li id="tinggiMaksimum">
+            tinggiMaksimum()
+            $$T_{\text{max}} = \frac{{V_{\text{o}} \cdot \sin(\theta)}}{{g}}$$
+            <pre>
+              <code>
+// Fungsi untuk menghitung waktu maksimum
+const hitungWaktuMax = () => {
+  return Math.round((kecepatanAwal * Math.sin(elevasi)) / gravitasi);
+};
+
+// Fungsi untuk menampilkan tinggi maksimum pada canvas
+const tinggiMaksimum = () => {
+    const tMax = hitungWaktuMax(); // Menghitung waktu tinggi maksimum dengan memanggil fungsi hitungWaktuMax()
+    const xMax = hitungX(tMax); // Menghitung nilai x pada waktu maksimum dengan memanggil fungsi hitungX(tMax)
+    const yMax = hitungY(tMax); // Menghitung nilai y pada waktu maksimum dengan memanggil fungsi hitungY(tMax)
+
+    // Mengatur gaya garis putus-putus
+    ctx.setLineDash([5, 3]); // Mengatur pola garis putus-putus
+
+    // Mengatur warna garis
+    ctx.strokeStyle = "white"; // Mengatur warna garis menjadi putih
+
+    // Menggambar garis putus-putus vertikal
+    ctx.beginPath();
+    ctx.moveTo(xMax, canvas.height - yMax); // Mengatur koordinat awal garis
+    ctx.lineTo(xMax, canvas.height); // Mengatur koordinat akhir garis
+    ctx.stroke(); // Menggambar garis
+
+    // Mengatur warna teks menjadi kuning jika waktu sekarang sudah menempuh waktu tinggi maksimum
+    ctx.fillStyle = waktu >= tMax ? "yellow" : "white"; 
+
+    ctx.fillText(
+      `Tinggi Maksimum ${convertToRealScala(yMax)} m dengan waktu tempuh ${tMax}s`,
+    xMax + 10,
+    canvas.height - yMax + yMax / 2
+    );
+    
+    // Memanggil fungsi gambarBola untuk menggambar bola pada posisi xMax, canvas.height - yMax dengan warna kuning
+    gambarBola(xMax, canvas.height - yMax, "yellow"); 
+};                   
+              </code>
+            </pre>
+          </li>
+          <li id="gambarBola">
+            gambarBola()
+            <pre>
+              <code>
+setInterval(() => {
+    // variable path akan di toggle setiap 1/2 detik
+    path = true;
+  }, 500);
+
+const gambarBola = (
+    xCanvas = x,
+    yCanvas = canvas.height - y,
+    warna = "red",
+    main = false
+    ) => {
+      ctx.beginPath();
+      ctx.arc(xCanvas, yCanvas, 10, 0, Math.PI * 2);
+    ctx.fillStyle = warna;
+    ctx.fill();
+    ctx.closePath();
+    
+  if (main && path) { // jika fungsi gambarBola di panggil di dalam fungsi utama "animasi"
+    // Menambahkan posisi bola ke array posisiBolaSebelumnya
+    posisiBolaSebelumnya.push({ x: xCanvas, y: yCanvas });
+  }
+};              
+              </code>
+            </pre>
+          </li>
+          <li id="gambarJejakBola">
+            gambarJejakBola()
+            <pre>
+              <code>
+// Fungsi untuk menggambar jejak bola pada canvas
+const gambarJejakBola = (warna = "white") => {
+    ctx.globalAlpha = 0.3; // Mengatur nilai transparansi global menjadi 0.3 (semi-transparan)
+
+    // Memanggil fungsi gambarBola untuk setiap posisi bola di Array posisiBolaSebelumnya[]
+    for (let i = 1; i < posisiBolaSebelumnya.length; i++) {
+        gambarBola(
+            posisiBolaSebelumnya[i].x,
+            posisiBolaSebelumnya[i].y,
+            warna,
+            false
+            ); 
+          }
+    path = false; // Mengatur variabel path menjadi false
+};            
+              </code>
+            </pre>
+          </li>
+          <li id="enableInput">
+            enableInput()
+            <pre>
+              <code>
+// Fungsi untuk mengaktifkan input
+const enableInput = () => {
+    change1 = false;
+    change2 = false;
+    document.getElementById("input-derajat").disabled = false;
+    document.getElementById("input-kecepatan-awal").disabled = false;
+};          
+              </code>
+            </pre>
+          </li>
+          <li id="requestAnimationFrame">
+            requestAnimationFrame()
+            <pre>
+              <code>
+const animasi = () => {
+    // Lakukan pembaruan animasi di sini
+
+    requestAnimationFrame(animasi); // Membuat pemanggilan rekursif untuk animasi berikutnya
+} 
+              </code>
+            </pre>
+          </li>
+          <li id="disabledInput">
+            disabledInput()
+            <pre>
+              <code>
+// Fungsi untuk meng-nonaktifkan input
+const disabledInput = () => {
+    document.getElementById("reset-button").disabled = true;
+    document.getElementById("input-derajat").disabled = true;
+    document.getElementById("input-kecepatan-awal").disabled = true;
+};        
+              </code>
+            </pre>
+          </li>
+          <li id="tambahWaktu">
+            tambahWaktu()
+            <pre>
+              <code>
+const tambahWaktu = () => {
+    waktu += satuDetik;
+};     
+</div>
+  <button id="scroll-to-top-button">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+</div>
+<script src="/lib/highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="../config/config.js"></script>
+    <script src="../api/githubAPI.js"></script>
+    <script src="../util/gerakParabola/scriptGP.js"></script>
+    <script src="../util/gerakParabola/listenerGP.js"></script>
+</body>
+</html>

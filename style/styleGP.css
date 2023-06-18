@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+#input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+#canvas-gerak-parabola {
+  border: 2px solid white;
+  box-shadow: 1px 1px 3px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(255, 255, 255, 0.75);
+  border-radius: 0.5rem;
+}
+
+.github-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.github-detail-container {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0.5;
+}
+
+#github-releases-version-count {
+  opacity: 0.5;
+}
+
+#github-button, #makalah-button {
+  cursor: pointer;
+  color: white;
+  gap: 0.5rem;
+  height: 2rem;
+  border: 2px solid #b18597;
+  border-radius: 0.5rem;
+  background-color: black;
+  width: max-content;
+}
+
+input[type="number"] {
+  /* Gaya umum */
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+
+  /* Gaya spesifik untuk tipe "number" */
+  width: 150px; /* Sesuaikan dengan lebar yang diinginkan */
+  height: 30px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
+
+/* Gaya saat input "number" mendapatkan fokus */
+input[type="number"]:focus {
+  border-color: #4d90fe; /* Misalnya, ubah warna border saat mendapatkan fokus */
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5); /* Misalnya, tambahkan efek shadow saat mendapatkan fokus */
+}
+
+/* Gaya saat input "number" bernilai tidak valid */
+input[type="number"]:invalid {
+  border-color: red; /* Misalnya, ubah warna border saat bernilai tidak valid */
+}
+
+button[type="reset"] {
+  /* Gaya umum */
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+button[type="reset"]:hover {
+  /* Gaya saat tombol di-hover */
+  background-color: #999;
+}
+
+button[type="reset"]:active {
+  /* Gaya saat tombol di-klik */
+  background-color: #666;
+}
+
+button[type="reset"]:disabled {
+  /* Gaya saat tombol dalam keadaan non-aktif */
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+#flowchart-detail {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#flowchart-detail h2 {
+  align-self: center;
+}
+
+.hljs {
+  border-radius: 0.5rem;
+}
+
+#scroll-to-top-button {
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
+  display: none;
+  width: max-content;
+  border-radius: 1rem;
+  z-index: 99999;
+}
+
+ol li {
+  cursor: pointer;
+}
+
+ol li:hover {
+  text-decoration: underline;
+}

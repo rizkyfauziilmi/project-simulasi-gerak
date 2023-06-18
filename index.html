@@ -8,16 +8,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Simulasi Gerak Jatuh Bebas</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    <link rel="stylesheet" href="/lib/highlight/styles/default.min.css" />
+    <link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.min.css" />
+    <title>GERAK JATUH BEBAS</title>
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
+    <link rel="icon" type="imag e/x-icon" href="/public/favicon.png" />
   </head>
-  <body>
+  <body id="body">
     <h1>Simulasi Gerak Jatuh Bebas</h1>
     <div class="github-container">
       <button id="github-button">
         <i class="fa fa-github"></i> Github Repository
       </button>
+      <a href="https://docs.google.com/uc?export=download&id=1Tbyu5nykS4-uUr6aVN-bCQnBnnsUdTJJ" download>
+        <button id="makalah-button"><i class="fa fa-file"></i> Unduh Makalah</button>
+      </a>
       <div class="github-detail-container">
         <i class="fa fa-code-fork" id="fork-count" aria-hidden="true">0</i>
         <i class="fa fa-star" id="star-count" aria-hidden="true">0</i>
@@ -28,7 +34,7 @@
       <canvas id="canvas"></canvas>
       <div class="input-container">
         <div class="setting">
-          <div class="select">
+          <div class="select-light" id="select-container">
             <select id="planet" name="planet">
               <option value="bumi" selected>Bumi</option>
               <option value="merkurius">Merkurius</option>
@@ -40,6 +46,7 @@
               <option value="uranus">Uranus</option>
               <option value="neptunus">Neptunus</option>
               <option value="matahari">Matahari</option>
+              <option value="custom">Custom Planet</option>
             </select>
           </div>
           <div class="checkbox-reset-container">
@@ -65,7 +72,21 @@
               value="nilai-checkbox"
             />
           </div>
-          <div class="detail-perhitungan-container">
+          <div class="visibality-setting-container">
+            <button class="btn" id="toggle-theme-button">
+              <i class="fa" id="icon-theme" aria-hidden="true"></i>
+            </button>
+            <button id="show-flowchart-button">
+              <i class="fa fa-code" aria-hidden="true"> Tampilkan Flowchart</i>
+            </button>
+            <button id="edit-button">
+              <i class="fa fa-edit" aria-hidden="true"> edit</i>
+            </button>
+          </div>
+          <div
+            class="detail-perhitungan-container"
+            id="detail-perhitungan-container"
+          >
             <p class="title">detail perhitungan</p>
             <p>Posisi setiap saat:</p>
             <p id="posisi-setiap-saat-text">Y(t) = Yo - 1/2gt^2 + Vo.t</p>
@@ -74,7 +95,7 @@
           </div>
         </div>
         <button
-          class="reset-button"
+          class="reset-button-light"
           type="reset"
           id="reset-button"
           onclick="resetSimulasi()"
@@ -85,19 +106,272 @@
       <br />
     </div>
     <div class="description">
-      <div class="rumus-container">
-        <ul>
-          <li>Y(t) = Yo - 1/2gt^2 + Vo.t</li>
-          <li>Vy(t) = -g * t</li>
-        </ul>
-      </div>
       <p id="copyright">
         Copyright © 2023 Candimadam & Rizky Fauzi Ilmi. All rights reserved.
       </p>
     </div>
+    <a href="template/gerakParabola.html" id="gerak-parabola-href"
+      >Gerak Parabola ➜</a
+    >
+    <iframe
+      src="template/flowchart.html"
+      id="iframe-flowchart"
+      width="895" 
+      height="777"
+    ></iframe>
+    <div id="modal-container">
+      <div id="modal">
+        <i class="fa fa-window-close" id="close-button-modal"></i>
+        <div class="input-wrapper">
+          <h3>Color</h3>
+          <input type="color" id="color-input" name="color" />
+        </div>
+        <div class="input-wrapper">
+          <h3>Gravitasi</h3>
+          <input
+            type="number"
+            id="gravity-input"
+            name="gravity"
+            placeholder="Besar gravitasi"
+          /><br />
+        </div>
+        <div class="input-wrapper">
+          <h3>Ukuran</h3>
+          <input
+            type="number"
+            id="size-planet-input"
+            name="size"
+            placeholder="Ukuran Planet"
+          /><br />
+        </div>
+      </div>
+    </div>
+    <div id="flowchart-detail">
+      <h2 id="daftar-isi">Deskripsi Fungsi</h2>
+      <ol>
+        <li onclick="scrollToElement('variable')">Variable</li>
+        <li onclick="scrollToElement('bersihkanCanvas')">Fungsi bersihkanCanvas</li>
+        <li onclick="scrollToElement('gambarBackground')">Fungsi gambarBackground</li>
+        <li onclick="scrollToElement('menghitungPosisi')">Fungsi menghitungPosisi</li>
+        <li onclick="scrollToElement('menghitungKecepatan')">Fungsi menghitungKecepatan</li>
+        <li onclick="scrollToElement('gambarBola')">Fungsi gambarBola</li>
+        <li onclick="scrollToElement('tambahWaktu')">Fungsi tambahWaktu</li>
+        <li onclick="scrollToElement('menampilkanText')">Fungsi menampilkanText</li>
+        <li onclick="scrollToElement('disableInput')">Fungsi disableInput</li>
+        <li onclick="scrollToElement('requestAnimationFrame')">Fungsi requestAnimationFrame</li>
+        <li onclick="scrollToElement('resetSimulasi')">Fungsi resetSimulasi</li>
+        <li onclick="scrollToElement('enableInput')">Fungsi enableInput</li>
+      </ol>
+      <li id="variable">
+        Variable
+        <pre>
+          <code>
+const posisiAwal = 0;
+const kecepatanAwal = 0;
+const satuDetik = 1 / 60;
+let gravitasi = dataBumi.gravitasi;
+let ukuranPlanet = dataBumi.ukuran;
+let waktu = 0;
+let posisiCanvas = posisiAwal;
+let posisiNyata = canvas.height;
+let kecepatan = kecepatanAwal;
+let warnaPlanetSekarang = dataBumi.warna;
+let resetOtomatis = false;
+let tamplikanSatuan = true;
+          </code>
+        </pre>
+      </li>
+      <li id="bersihkanCanvas">
+        bersihkanCanvas()
+        <pre>
+          <code>
+// Fungsi untuk membersihkan canvas
+const bersihkanCanvas = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+};
+          </code>
+        </pre>
+      </li>
+      <li id="gambarBackground">
+        gambarBackground()
+        <pre>
+          <code>
+// set background
+const backgroundImage = new Image();
+backgroundImage.src = "public/space.png";
+
+// Fungsi untuk menggambar latar belakang canvas
+const gambarBackground = () => {
+  // Menggambar dua lapis latar belakang yang saling berulang
+  ctx.drawImage(backgroundImage, 0, -posisiCanvas, canvas.width, canvas.height);
+  ctx.drawImage(backgroundImage, 0, canvas.height - posisiCanvas - 1, canvas.width, canvas.height * 1.1);
+};
+          </code>
+        </pre>
+      </li>
+      <li id="menghitungPosisi">
+        menghitungPosisi()
+        $$Y(t) = Y_0 - \frac{1}{2}gt^2 + V_0t$$
+        <pre>
+          <code>
+// Fungsi untuk menghitung posisi bola pada setiap waktu
+const menghitungPosisi = () => {
+  //  Rumus di ubah menjadi + karena titik 0 pad sumbu Y canvas dimulai dari atas
+  posisiCanvas = posisiAwal + 0.5 * gravitasi * Math.pow(waktu, 2) + kecepatanAwal * waktu;
+  posisiNyata = canvas.height - posisiCanvas;
+};
+          </code>
+        </pre>
+      </li>
+      <li id="menghitungKecepatan">
+        menghitungKecepatan()
+        $$V_y(t) = - g \cdot t$$
+        <pre>
+          <code>
+// Fungsi untuk menghitung kecepatan bola pada setiap waktu
+const menghitungKecepatan = () => {
+  kecepatan = -gravitasi * waktu;
+};
+          </code>
+        </pre>
+      </li>
+      <li id="gambarBola">
+        gambarBola()
+        <pre>
+          <code>
+// Fungsi untuk menggambar bola pada posisi tertentu
+const gambarBola = (x = canvas.width / 2, y = posisiCanvas, radius = ukuranPlanet, sAngle = 0, eAngle = Math.PI * 2) => {
+  ctx.beginPath();
+  ctx.arc(x, y, radius, sAngle, eAngle);
+  ctx.fillStyle = warnaPlanetSekarang;
+  ctx.fill();
+  ctx.closePath();
+};
+          </code>
+        </pre>
+      </li>
+      <li id="tambahWaktu">
+        tambahWaktu()
+        <pre>
+          <code>
+const tambahWaktu = () => {
+  waktu += satuDetik;
+};            
+          </code>
+        </pre>
+      </li>
+      <li id="menampilkanText">
+        menampilkanText()
+        $$t = \sqrt{\frac{2{h}}{\text{g}}}$$
+        <pre>
+          <code>
+// Fungsi untuk menghitung waktu yang dibutuhkan 
+const hitungEstimasiWaktu = () => {
+  const estimasiWaktu = Math.sqrt((2 * canvas.height) / gravitasi);
+  return estimasiWaktu;
+};
+
+// Fungsi untuk menampilkan teks informasi
+const menampilkanText = () => {
+  // Mendapatkan nilai-nilai yang akan ditampilkan dalam teks
+  const textGravitasi = gravitasi.toFixed(2);
+  const textPosisiAwal = canvas.height.toFixed(2);
+  const textWaktu = Math.floor(waktu);
+  const textKecepatan = kecepatan.toFixed(2);
+  const textPosisiBolaDiCanvas = posisiCanvas <= canvas.height 
+                                  ? posisiCanvas.toFixed(2) 
+                                  : Math.floor(posisiCanvas.toFixed(2));
+  const textPosisiBolaDiNyata = posisiCanvas <= canvas.height 
+                                  ? posisiNyata.toFixed(2) 
+                                  : Math.ceil(posisiNyata.toFixed(2));
+  const estimasiWaktu = hitungEstimasiWaktu();
+
+  // Menampilkan teks informasi pada elemen HTML dan pada canvas
+  document.getElementById("posisi-setiap-saat-text").textContent = `Y(${textWaktu}) = (${textPosisiAwal}) - 
+    1/2*(${textGravitasi})*(${textWaktu})^2 + (${kecepatanAwal})*(${waktu.toFixed(2)}) = ${textPosisiBolaDiNyata} m`;
+    
+  document.getElementById("kecepatan-setiap-saat-text").textContent = `Vy(${textWaktu}) = (-${textGravitasi}) * 
+    (${textWaktu}) = ${textKecepatan} m / s`;
+
+  ctx.font = "bold 13px Arial, sans-serif";
+  ctx.fillStyle = "white";
+
+  ctx.fillText(`Gravitasi ${tamplikanSatuan ? "(g)" : ""}: ${textGravitasi} m / s²`, 10, 20);
+  ctx.fillText(`Posisi awal ${tamplikanSatuan ? "(Yo)" : ""}: ${textPosisiAwal} m`, 10, 40);
+  ctx.fillText(`Waktu ${tamplikanSatuan ? "(t)" : ""}: ${textWaktu} s`, 10, 60);
+  ctx.fillText(`Kecepatan ${tamplikanSatuan ? "(Vy)" : ""}: ${textKecepatan} m / s`, 10, 80);
+  ctx.fillText(`Posisi bola di canvas ${tamplikanSatuan ? "(yc)" : ""}: ${textPosisiBolaDiCanvas} m`, 10, 100);
+  ctx.fillText(`Posisi bola di dunia nyata ${tamplikanSatuan ? "(y)" : ""}: ${textPosisiBolaDiNyata} m`, 10, 120);
+  ctx.fillText(`Estimasi waktu jatuh: ${Math.floor(estimasiWaktu)} s`, 10, 140);
+};           
+          </code>
+        </pre>
+      </li>
+      <li id="disableInput">
+        disableInput()
+        <pre>
+          <code>
+// Fungsi untuk menonaktifkan input pengguna selama animasi berjalan
+const disableInput = () => {
+  selectPlanet.disabled = true;
+  document.getElementById("edit-button").disabled = true;
+};      
+          </code>
+        </pre>
+      </li>
+      <li id="requestAnimationFrame">
+        requestAnimationFrame()
+        <pre>
+          <code>
+const animasi = () => {
+  // Lakukan pembaruan animasi di sini
+
+  requestAnimationFrame(animasi); // Membuat pemanggilan rekursif untuk animasi berikutnya
+}   
+          </code>
+        </pre>
+      </li>
+      <li id="resetSimulasi">
+        resetSimulasi()
+        <pre>
+          <code>
+// Fungsi untuk mereset simulasi
+const resetSimulasi = () => {
+  tombolReset.style.display = "none";
+  waktu = 0;
+  posisiCanvas = posisiAwal;
+  posisiNyata = canvas.height;
+  kecepatan = kecepatanAwal;
+  animasi();
+};
+          </code>
+        </pre>
+      </li>
+      <li id="enableInput">
+        enableInput()
+        <pre>
+          <code>
+// Fungsi untuk mengaktifkan input pengguna setelah animasi selesai
+const enableInput = () => {
+  tombolReset.style.display = "block";
+  selectPlanet.disabled = false;
+  document.getElementById("edit-button").disabled = false;
+};
+          </code>
+        </pre>
+      </li>
+    </div>   
+    <button id="scroll-to-top-button">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <script src="/lib/highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="util/theme.js"></script>
+    <script src="util/flowchartVisualization.js"></script>
     <script src="config/config.js"></script>
     <script src="api/githubAPI.js"></script>
-    <script src="util/planet.js"></script>
     <script src="util/script.js"></script>
     <script src="util/listener.js"></script>
   </body>
