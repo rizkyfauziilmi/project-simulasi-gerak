@@ -1,9 +1,7 @@
-/* These lines of code are initializing variables. */
-let change1 = false;
-let change2 = false;
-
-let prevDerajat = radiansToDegrees(elevasi);
-let prevKecepatanAwal = kecepatanAwal;
+const reCalculate = (kecepatanAwal, elevasi) => {
+  vox = Math.round(kecepatanAwal * Math.cos(elevasi));
+  voy = Math.round(kecepatanAwal * Math.sin(elevasi));
+};
 
 /**
  * This function handles a change in degree value input and converts it to radians while also enabling
@@ -15,13 +13,13 @@ let prevKecepatanAwal = kecepatanAwal;
  */
 const handleDerajatChange = (e) => {
   e.preventDefault();
+
   const newValue = e.target.value;
   elevasi = degreesToRadians(newValue);
-  change1 = true;
 
-  if (change1 && change2) {
-    document.getElementById("reset-button").disabled = false;
-  }
+  reCalculate(kecepatanAwal, elevasi);
+
+  resetSimulasi();
 };
 
 /**
@@ -33,10 +31,10 @@ const scrollToElement = (elementId) => {
   if (element) {
     element.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
   }
-}
+};
 
 /**
  * This function handles the change in the initial speed input and updates the values of vox and voy
@@ -49,14 +47,11 @@ const scrollToElement = (elementId) => {
 const handleKecepatanAwalChange = (e) => {
   e.preventDefault();
   const newValue = e.target.value;
-  kecepatanAwal = parseInt(newValue);
-  vox = Math.round(kecepatanAwal * Math.cos(elevasi));
-  voy = Math.round(kecepatanAwal * Math.sin(elevasi));
-  change2 = true;
+  kecepatanAwal = parseFloat(newValue);
 
-  if (change1 && change2) {
-    document.getElementById("reset-button").disabled = false;
-  }
+  reCalculate(kecepatanAwal, elevasi);
+
+  resetSimulasi();
 };
 
 /**
@@ -66,12 +61,17 @@ const handleResetButtonClick = () => {
   resetSimulasi();
 };
 
-document.getElementById("input-derajat").addEventListener("change", handleDerajatChange);
+document
+  .getElementById("input-derajat")
+  .addEventListener("change", handleDerajatChange);
 
-document.getElementById("input-kecepatan-awal").addEventListener("change", handleKecepatanAwalChange);
+document
+  .getElementById("input-kecepatan-awal")
+  .addEventListener("change", handleKecepatanAwalChange);
 
-document.getElementById("reset-button").addEventListener("click", handleResetButtonClick);
-
+document
+  .getElementById("reset-button")
+  .addEventListener("click", handleResetButtonClick);
 
 /* This code adds an event listener to the `window` object for the "load" event. When the webpage
 finishes loading, the function passed as the second argument to `addEventListener` is called. This
@@ -82,11 +82,12 @@ window.addEventListener("load", () => {
   const defaultElevasi = degreesToRadians(37);
   const defaultKecepatanAwal = 250;
 
-  document.getElementById("input-derajat").value = radiansToDegrees(defaultElevasi)
-  elevasi = defaultElevasi
+  document.getElementById("input-derajat").value =
+    radiansToDegrees(defaultElevasi);
+  elevasi = defaultElevasi;
 
-  document.getElementById("input-kecepatan-awal").value = defaultKecepatanAwal
-  kecepatanAwal = kecepatanAwal
+  document.getElementById("input-kecepatan-awal").value = defaultKecepatanAwal;
+  kecepatanAwal = kecepatanAwal;
 });
 
 /* This code adds an event listener to the window object for the "scroll" event. When the user scrolls
@@ -94,16 +95,17 @@ the webpage, the function passed as the second argument to `addEventListener` is
 function first gets the HTML element with the ID "daftar-isi" and stores it in the `element`
 variable. It then checks if the `offsetTop` property of the element is equal to 0. If it is, it sets
 the `scrolly` variable to `undefined`, otherwise it sets it to the `offsetTop` value. */
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const element = document.getElementById("daftar-isi");
   const scrolly = element.offsetTop === 0 ? undefined : element.offsetTop;
 
   if (window.scrollY > scrolly) {
-    document.getElementById('scroll-to-top-button').style.display = "inline-block"
+    document.getElementById("scroll-to-top-button").style.display =
+      "inline-block";
   } else {
-    document.getElementById('scroll-to-top-button').style.display = "none"
+    document.getElementById("scroll-to-top-button").style.display = "none";
   }
-})
+});
 
 /* This code adds an event listener to the HTML element with the ID "scroll-to-top-button". When the
 button is clicked, it calls the `scrollToElement` function with the argument "daftar-isi", which
@@ -111,10 +113,12 @@ scrolls smoothly to the HTML element with the ID "daftar-isi" on the webpage. Ad
 the string "red" to the console, but this is likely a debugging statement that can be removed. This
 code is likely used to provide a button that allows the user to quickly scroll back to the top of
 the webpage. */
-document.getElementById('scroll-to-top-button').addEventListener('click', () => {
-  console.log('red')
-  scrollToElement('daftar-isi')
-})
+document
+  .getElementById("scroll-to-top-button")
+  .addEventListener("click", () => {
+    console.log("red");
+    scrollToElement("daftar-isi");
+  });
 
 /* This code adds an event listener to the HTML element with the ID "github-button". When the button is
 clicked, it opens a new window with the URL
@@ -123,7 +127,7 @@ which opens the link in a new tab. This code is likely used to provide a link to
 repository for the project. */
 document.getElementById("github-button").addEventListener("click", () => {
   const repositoryLink =
-    "https://github.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas";
+    "https://github.com/RizkyFauziIlmi/project-simulasi-gerak";
 
   window.open(repositoryLink, "_blank");
 });

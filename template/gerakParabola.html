@@ -37,11 +37,11 @@
         <input type="number" id="input-kecepatan-awal" min="0" max="250" value="250">
         <button type="reset" id="reset-button">Reset</button>
     </div>
-    <a href="../index.html">⬅ Gerak Jatuh Bebas</a>
+    <a href="../index.html">← Gerak Jatuh Bebas</a>
     <iframe
     src="./flowchart2.html"
     width="900" 
-    height="789"
+    height="710"
     ></iframe>
     <div id="flowchart-detail">
       <h2 id="daftar-isi">Deskripsi Fungsi</h2>
@@ -55,10 +55,9 @@
           <li onclick="scrollToElement('tinggiMaksimum')">Fungsi tinggiMaksimum</li>
           <li onclick="scrollToElement('gambarBola')">Fungsi gambarBola</li>
           <li onclick="scrollToElement('gambarJejakBola')">Fungsi gambarJejakBola</li>
-          <li onclick="scrollToElement('enableInput')">Fungsi enableInput</li>
           <li onclick="scrollToElement('requestAnimationFrame')">Fungsi requestAnimationFrame</li>
-          <li onclick="scrollToElement('disabledInput')">Fungsi disabledInput</li>
           <li onclick="scrollToElement('tambahWaktu')">Fungsi tambahWaktu</li>
+          <li onclick="scrollToElement('resetSimulasi')">Fungsi resetSimulasi</li>
         </ol>
         <li id="variable">
           Variable
@@ -76,7 +75,7 @@ const yAwal = 0;
 let gravitasi = 10;
 let kecepatanAwal = 250;
 let elevasi = degreesToRadians(37);
-let satuDetik = (1 / 120) * 10;
+let satuDetik = (1 / 60) * 2;
 let vox = Math.round(kecepatanAwal * Math.cos(elevasi));
 let voy = Math.round(kecepatanAwal * Math.sin(elevasi));
 let waktu = 0;
@@ -84,7 +83,12 @@ let path = false;
 let x = 0;
 let y = 0;
 
-let posisiBolaSebelumnya = []; // Array untuk menyimpan posisi bola sebelumnya
+// variable untuk menyimpan ID animasi dan interval agar nanti bisa di hapus
+let animationId;
+let intervalId;
+
+// Array untuk menyimpan posisi bola sebelumnya
+let posisiBolaSebelumnya = [];
             </code>
           </pre>
         </li>
@@ -284,20 +288,6 @@ const gambarJejakBola = (warna = "white") => {
               </code>
             </pre>
           </li>
-          <li id="enableInput">
-            enableInput()
-            <pre>
-              <code>
-// Fungsi untuk mengaktifkan input
-const enableInput = () => {
-    change1 = false;
-    change2 = false;
-    document.getElementById("input-derajat").disabled = false;
-    document.getElementById("input-kecepatan-awal").disabled = false;
-};          
-              </code>
-            </pre>
-          </li>
           <li id="requestAnimationFrame">
             requestAnimationFrame()
             <pre>
@@ -305,21 +295,12 @@ const enableInput = () => {
 const animasi = () => {
     // Lakukan pembaruan animasi di sini
 
-    requestAnimationFrame(animasi); // Membuat pemanggilan rekursif untuk animasi berikutnya
+    /* 
+    * Membuat pemanggilan rekursif untuk animasi berikutnya
+    * dan menyimpan ID animasi di variable animationId
+    */
+    animationId = requestAnimationFrame(animasi); 
 } 
-              </code>
-            </pre>
-          </li>
-          <li id="disabledInput">
-            disabledInput()
-            <pre>
-              <code>
-// Fungsi untuk meng-nonaktifkan input
-const disabledInput = () => {
-    document.getElementById("reset-button").disabled = true;
-    document.getElementById("input-derajat").disabled = true;
-    document.getElementById("input-kecepatan-awal").disabled = true;
-};        
               </code>
             </pre>
           </li>
@@ -330,6 +311,41 @@ const disabledInput = () => {
 const tambahWaktu = () => {
     waktu += satuDetik;
 };     
+              </code>
+            </pre>
+          </li>
+          <li id="resetSimulasi">
+            resetSimulasi()
+            <pre>
+              <code>
+const setPath = () => {
+  path = true;
+}
+
+const startInterval = () => {
+  intervalId = setInterval(setPath, 500);
+}
+
+const stopInterval = () => {
+  clearInterval(intervalId);
+}
+
+const resetSimulasi = () => {
+  cancelAnimationFrame(animationId);
+  stopInterval();
+  
+  waktu = 0;
+  x = 0;
+  y = 0;
+  posisiBolaSebelumnya = [];
+
+  startInterval();
+
+  animasi();
+};    
+              </code>
+            </pre>
+          </li>
 </div>
   <button id="scroll-to-top-button">
     <i class="fa fa-arrow-up"></i>

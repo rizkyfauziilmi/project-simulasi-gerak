@@ -49,10 +49,25 @@ let waktu = 0;
 let path = false;
 let x = 0;
 let y = 0;
+let animationId;
+let intervalId;
 
-setInterval(() => {
+// Array untuk menyimpan posisi bola sebelumnya
+let posisiBolaSebelumnya = [];
+
+const setPath = () => {
   path = true;
-}, 500);
+}
+
+const startInterval = () => {
+  intervalId = setInterval(setPath, 500);
+}
+
+startInterval();
+
+const stopInterval = () => {
+  clearInterval(intervalId);
+}
 
 
 /**
@@ -82,8 +97,6 @@ const tambahWaktu = () => {
   waktu += satuDetik;
 };
 
-// Array untuk menyimpan posisi bola sebelumnya
-let posisiBolaSebelumnya = [];
 
 
 /**
@@ -273,27 +286,6 @@ const textDetail = () => {
 };
 
 /**
- * The function enables two input fields and sets two variables to false.
- */
-const enableInput = () => {
-  change1 = false;
-  change2 = false;
-  document.getElementById("input-derajat").disabled = false;
-  document.getElementById("input-kecepatan-awal").disabled = false;
-};
-/**
- * The function disables certain input elements on a web page.
- */
-
-const disabledInput = () => {
-  document.getElementById("reset-button").disabled = true;
-  document.getElementById("input-derajat").disabled = true;
-  document.getElementById("input-kecepatan-awal").disabled = true;
-};
-
-disabledInput();
-
-/**
  * This function animates a bouncing ball on a canvas and enables input when the ball reaches the top
  * or the time runs out.
  * @returns If the condition `if (waktu > 0 && y <= 0)` is true, then the function will return and
@@ -313,11 +305,9 @@ const animasi = () => {
   gambarJejakBola();
 
   if (waktu > 0 && y <= 0) {
-    enableInput();
-    return;
+    cancelAnimationFrame(animationId)
   } else {
-    requestAnimationFrame(animasi);
-    disabledInput();
+    animationId = requestAnimationFrame(animasi);
   }
 
   tambahWaktu();
@@ -328,10 +318,16 @@ const animasi = () => {
  * positions to zero and then calling the animation function.
  */
 const resetSimulasi = () => {
+  cancelAnimationFrame(animationId);
+  stopInterval();
+  
   waktu = 0;
   x = 0;
   y = 0;
   posisiBolaSebelumnya = [];
+
+  startInterval();
+
   animasi();
 };
 
