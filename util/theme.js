@@ -1,16 +1,24 @@
-// Mengecek apakah preferensi tema pengguna adalah dark mode
+/* These lines of code are checking the user's preferred color scheme (light or dark) using the
+`matchMedia()` method. The result is stored in the `darkOsTheme` constant. The `matches` property of
+`darkOsTheme` is then used to set the initial value of the `isDark` variable to `true` if the user
+prefers dark mode, and `false` otherwise. The `initState` variable is set to `true` to indicate that
+the initial state of the theme has not been set yet. */
 const darkOsTheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-// Menginisialisasi variabel isDark berdasarkan preferensi tema
 let isDark = darkOsTheme.matches ? true : false;
-
-// Variabel initState untuk melacak apakah inisialisasi pertama kali dilakukan
 let initState = true;
 
-// Element background
+
+/* `const background = document.getElementById("body");` is selecting the HTML element with the ID of
+"body" and assigning it to the `background` constant. This element is likely the background of the
+webpage and will be used later in the code to toggle the "dark-mode" class on and off to change the
+theme of the webpage. */
 const background = document.getElementById("body");
 
-// Fungsi untuk mengubah tampilan menjadi dark mode
+
+/**
+ * The function turns the website into a dark mode theme by changing various elements' colors and
+ * styles.
+ */
 const turnDark = () => {
   background?.classList.toggle("dark-mode");
   // Mengubah properti tampilan planet
@@ -48,7 +56,10 @@ const turnDark = () => {
   isDark = true;
 };
 
-// Fungsi untuk mengubah tampilan menjadi light mode
+
+/**
+ * The function changes the visual theme of the webpage to a light mode.
+ */
 const turnLight = () => {
   // Toggle class dark-mode pada background jika bukan inisialisasi pertama kali
   if (!initState) {
@@ -89,7 +100,10 @@ const turnLight = () => {
   isDark = false;
 };
 
-// Fungsi inisialisasi tema saat halaman dimuat
+
+/**
+ * The function initializes the page's color scheme based on a boolean value.
+ */
 const init = () => {
   if (isDark) {
     turnDark();
@@ -100,7 +114,10 @@ const init = () => {
   initState = false;
 };
 
-// Fungsi untuk mengganti tema saat tombol toggle tema ditekan
+
+/**
+ * The function toggles between a light and dark theme.
+ */
 const toggleTheme = () => {
   if (isDark) {
     turnLight();
@@ -109,10 +126,18 @@ const toggleTheme = () => {
   }
 };
 
-// Inisialisasi tema saat halaman dimuat
+
+/* `init();` is calling the `init()` function, which initializes the page's color scheme based on the
+value of the `isDark` variable. If `isDark` is `true`, the `turnDark()` function is called to set
+the page to a dark mode theme. If `isDark` is `false`, the `turnLight()` function is called to set
+the page to a light mode theme. The `initState` variable is also set to `false` to indicate that the
+initial state of the theme has been set. */
 init();
 
-// Menambahkan event listener pada tombol toggle tema
+
+/* This code is adding an event listener to the HTML element with the ID of "toggle-theme-button". When
+this element is clicked, the `toggleTheme()` function is called, which toggles the visual theme of
+the webpage between light and dark mode. */
 document.getElementById("toggle-theme-button").addEventListener("click", () => {
   toggleTheme();
 });
