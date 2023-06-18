@@ -84,7 +84,7 @@ target, which opens the link in a new tab. This allows the user to navigate to t
 for the project. */
 document.getElementById("github-button").addEventListener("click", () => {
   const repositoryLink =
-    "https://github.com/RizkyFauziIlmi/project-simulasi-gerak-jatuh-bebas";
+    "https://github.com/RizkyFauziIlmi/project-simulasi-gerak";
 
   window.open(repositoryLink, "_blank");
 });
@@ -176,7 +176,7 @@ function gets the value of the input element and sets the value of two variables
 "customPlanetObject.gravitasi", to the parsed integer value of the input element. These variables
 are used to set the gravity of the planet in the simulation. */
 gravityInputElement.addEventListener("change", (e) => {
-  const newGravity = parseInt(e.target.value);
+  const newGravity = parseFloat(e.target.value);
   gravitasi = newGravity;
   customPlanetObject.gravitasi = newGravity;
 });

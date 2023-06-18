@@ -111,13 +111,13 @@
       </p>
     </div>
     <a href="template/gerakParabola.html" id="gerak-parabola-href"
-      >Gerak Parabola ➜</a
+      >Gerak Parabola →</a
     >
     <iframe
       src="template/flowchart.html"
       id="iframe-flowchart"
-      width="895" 
-      height="777"
+      width="1200" 
+      height="690"
     ></iframe>
     <div id="modal-container">
       <div id="modal">
@@ -157,10 +157,8 @@
         <li onclick="scrollToElement('gambarBola')">Fungsi gambarBola</li>
         <li onclick="scrollToElement('tambahWaktu')">Fungsi tambahWaktu</li>
         <li onclick="scrollToElement('menampilkanText')">Fungsi menampilkanText</li>
-        <li onclick="scrollToElement('disableInput')">Fungsi disableInput</li>
         <li onclick="scrollToElement('requestAnimationFrame')">Fungsi requestAnimationFrame</li>
         <li onclick="scrollToElement('resetSimulasi')">Fungsi resetSimulasi</li>
-        <li onclick="scrollToElement('enableInput')">Fungsi enableInput</li>
       </ol>
       <li id="variable">
         Variable
@@ -178,6 +176,7 @@ let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
 let tamplikanSatuan = true;
+let animationId;
           </code>
         </pre>
       </li>
@@ -307,18 +306,6 @@ const menampilkanText = () => {
           </code>
         </pre>
       </li>
-      <li id="disableInput">
-        disableInput()
-        <pre>
-          <code>
-// Fungsi untuk menonaktifkan input pengguna selama animasi berjalan
-const disableInput = () => {
-  selectPlanet.disabled = true;
-  document.getElementById("edit-button").disabled = true;
-};      
-          </code>
-        </pre>
-      </li>
       <li id="requestAnimationFrame">
         requestAnimationFrame()
         <pre>
@@ -326,8 +313,12 @@ const disableInput = () => {
 const animasi = () => {
   // Lakukan pembaruan animasi di sini
 
-  requestAnimationFrame(animasi); // Membuat pemanggilan rekursif untuk animasi berikutnya
-}   
+  /* 
+  * Membuat pemanggilan rekursif untuk animasi berikutnya
+  * dan menyimpan ID animasi di variable animationId
+  */
+  animationId = requestAnimationFrame(animasi); 
+} 
           </code>
         </pre>
       </li>
@@ -337,26 +328,15 @@ const animasi = () => {
           <code>
 // Fungsi untuk mereset simulasi
 const resetSimulasi = () => {
-  tombolReset.style.display = "none";
+  cancelAnimationFrame(animationId)
+
   waktu = 0;
   posisiCanvas = posisiAwal;
   posisiNyata = canvas.height;
   kecepatan = kecepatanAwal;
+
   animasi();
-};
-          </code>
-        </pre>
-      </li>
-      <li id="enableInput">
-        enableInput()
-        <pre>
-          <code>
-// Fungsi untuk mengaktifkan input pengguna setelah animasi selesai
-const enableInput = () => {
-  tombolReset.style.display = "block";
-  selectPlanet.disabled = false;
-  document.getElementById("edit-button").disabled = false;
-};
+};z
           </code>
         </pre>
       </li>

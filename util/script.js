@@ -1,7 +1,6 @@
 /** @type {HTMLCanvasElement} */
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const tombolReset = document.getElementById("reset-button");
 const selectPlanet = document.getElementById("planet");
 const checkboxResetOtomatis = document.getElementById(
   "checkbox-reset-otomatis"
@@ -93,6 +92,7 @@ let kecepatan = kecepatanAwal;
 let warnaPlanetSekarang = dataBumi.warna;
 let resetOtomatis = false;
 let tamplikanSatuan = true;
+let animationId;
 
 /**
  * The function adds one second to a given time.
@@ -168,16 +168,19 @@ const bersihkanCanvas = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 };
 
+
 /**
- * The function resets a simulation by hiding a button, resetting variables, and calling an animation
- * function.
+ * The function resets a simulation by canceling any ongoing animation, resetting various variables to
+ * their initial values, and starting a new animation.
  */
 const resetSimulasi = () => {
-  tombolReset.style.display = "none";
+  cancelAnimationFrame(animationId)
+
   waktu = 0;
   posisiCanvas = posisiAwal;
   posisiNyata = canvas.height;
   kecepatan = kecepatanAwal;
+
   animasi();
 };
 
@@ -269,26 +272,6 @@ const menghitungKecepatan = () => {
 
 
 /**
- * The function disables the selectPlanet dropdown and the edit-button.
- */
-const disableInput = () => {
-  selectPlanet.disabled = true;
-  document.getElementById("edit-button").disabled = true;
-};
-
-
-/**
- * The function enables input by displaying a reset button, enabling a select element, and enabling an
- * edit button.
- */
-const enableInput = () => {
-  tombolReset.style.display = "block";
-  selectPlanet.disabled = false;
-  document.getElementById("edit-button").disabled = false;
-};
-
-
-/**
  * This function animates a ball on a canvas and resets it if necessary.
  */
 const animasi = () => {
@@ -300,13 +283,12 @@ const animasi = () => {
   tambahWaktu();
   menampilkanText();
   if (posisiCanvas < canvas.height) {
-    disableInput();
-    requestAnimationFrame(animasi);
+    animationId = requestAnimationFrame(animasi);
   } else {
     if (resetOtomatis) {
       resetSimulasi();
     } else {
-      enableInput();
+      cancelAnimationFrame(animationId)
     }
   }
 };
